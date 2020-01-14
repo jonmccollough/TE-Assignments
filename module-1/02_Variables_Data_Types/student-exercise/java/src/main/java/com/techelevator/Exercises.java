@@ -8,6 +8,11 @@ public class Exercises {
         1. 4 birds are sitting on a branch. 1 flies away. How many birds are left on
         the branch?
         */
+		
+		int birds = 4;
+		int birdsThatLeft = 1;
+		int totalBirds = birds - birdsThatLeft;
+		System.out.println(totalBirds);
 
 		// ### EXAMPLE:
 		int initialNumberOfBirds = 4;
@@ -18,6 +23,11 @@ public class Exercises {
         2. There are 6 birds and 3 nests. How many more birds are there than
         nests?
         */
+		
+		int numOfBirds = 6;
+		int numOfNests = 3;
+		int numOfExtraBirds = numOfBirds - numOfNests;
+		System.out.println(numOfExtraBirds);
 
 		// ### EXAMPLE:
 		int numberOfBirds = 6;
@@ -28,25 +38,45 @@ public class Exercises {
         3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
         many raccoons are left in the woods?
         */
+		int intialRaccoons = 3;
+		int raccoonsThatLeft = 2;
+		int raccoonsLeftInWoods = intialRaccoons - raccoonsThatLeft;
+		System.out.println(raccoonsLeftInWoods);
 
         /*
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
+		int numOfFlowers = 5;
+		int numOfBees = 3;
+		int lessBeesThanFlowers = numOfFlowers - numOfBees;
+		System.out.println(lessBeesThanFlowers);
 
         /*
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
         */
+		int lonelyPigeon = 1;
+		int anotherPigeon = 1;
+		int totalPigeons = lonelyPigeon + anotherPigeon;
+		System.out.println(totalPigeons);
 
         /*
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
+		int owlsOnFence = 3;
+		int joiningOwls = 2;
+		int totalOwls = owlsOnFence + joiningOwls;
+		System.out.println(totalOwls);
 
         /*
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
+		int beaversWorking = 2;
+		int beaversSwimming = 1;
+		int totalBeaversWorking = beaversWorking - beaversSwimming;
+		System.out.println(totalBeaversWorking);
 
         /*
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
