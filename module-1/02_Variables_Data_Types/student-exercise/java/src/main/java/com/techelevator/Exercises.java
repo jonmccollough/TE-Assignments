@@ -536,11 +536,10 @@ public class Exercises {
 		double distanceFromNYtoChicago = 800;
 		double distanceTraveled = 537;
 		double percentageTraveled = distanceTraveled / distanceFromNYtoChicago;
-		int percentageTraveledInInteger = (int) percentageTraveled * 100;
+		int percentageTraveledInInteger = (int) (percentageTraveled * 100);
 		System.out.println(percentageTraveled);
 		System.out.println(percentageTraveledInInteger);
-		
-		
+
 	}
 
 }
