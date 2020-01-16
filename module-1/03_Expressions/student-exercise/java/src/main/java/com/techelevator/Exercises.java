@@ -752,9 +752,25 @@ public class Exercises {
 	 */
 	public int luckySum(int a, int b, int c) {
 		
+		int sum = a+b+c;
+		if ( a == 13 && b == 13 ) {
+			
+			return 0;
+			
+		} else if (b == 13) {
 		
+		sum = a;
 		
-		return 0;
-	} 
-
+		} else if (c == 13) {
+			
+		sum = a+ b;
+		
+		} else if (a == 13) {
+			
+		sum = c;
+		
+		}
+		
+		return sum;
+	}
 }
