@@ -1,7 +1,10 @@
 package com.techelevator;
 
 import org.junit.*;
+
 import static org.junit.Assert.*;
+import org.junit.runners.MethodSorters;
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 public class LectureTest {
 
