@@ -432,21 +432,21 @@ public class Exercises {
 	 */
 	public String alarmClock(int day, boolean vacation) {
 		
-		if ( ( day == 1 ) || ( day == 2 ) || ( day == 3 ) || ( day == 4 ) ||  ( day == 5 ) && ( !vacation ) ){
+		if ( ( ( day == 1 ) || ( day == 2 ) || ( day == 3 ) || ( day == 4 ) ||  ( day == 5 ) ) && ( vacation ) ){
+			
+			return "10:00"; 
+		
+		} else if ( ( ( day == 0 ) || ( day == 6 ) ) && ( vacation) ) {
+		
+			return "off"; 
+			
+		} else if ( ( ( day == 1 ) || ( day == 2 ) || ( day == 3 ) || ( day == 4 ) || ( day == 5 ) ) && !vacation){
 			
 			return "7:00"; 
-		
-		} else if ( ( ( day == 0 ) || ( day == 6 ) ) && ( !vacation) ) {
-		
-			return "10:00"; 
-			
-		} else if ( ( ( day == 1 ) || ( day == 2 ) || ( day == 3 ) || ( day == 4 ) || ( day == 5 ) ) && vacation){
-			
-			return "10:00"; 
 			
 		} else {
 			
-			return "off";
+			return "10:00";
 		}
 	}
 
@@ -459,16 +459,20 @@ public class Exercises {
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
 		
-		if ( (outsideMode) && ( ( n <= 1 ) || ( n <= 10 ) ) ) {
+		if ( outsideMode && ( n <= 1  || n >= 10 ) ) {
 			
 			return true;
 			
-		} else if ( (!outsideMode) && ( n >= 1 ) && ( n <= 10) ) {
+		} else if ( (!outsideMode) && ( n >= 1 && n <= 10) ) {
 		
+		return true;
+		
+		}
+			
 		return false;
 	
-	}
-	}
+}
+	
 
 	/*
 	 23. We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of 11.
@@ -693,7 +697,19 @@ public class Exercises {
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+		
+		if ( ( b > a ) && ( c > b ) ) {
+			
+			return true ;
+			
+		} else if ( equalOk && (b >= a) && ( c >= b ) ) {
+			
+			return true;
+			
+	}else{
+		
 		return false;
+	}
 	}
 
 	/*
@@ -704,7 +720,24 @@ public class Exercises {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
-		return 0;
+		int sum = a+b+c;
+		if ( a == c && a == b && b == c) {
+			
+			return 0;
+			
+		} else if ( a == b ) {
+			
+			sum = c;
+			
+		} else if (b == c) { 
+			
+			sum = a; 
+		
+		} else if (c == a) {
+			
+			sum = b; }
+	
+			return sum;
 	}
 
 	/*
@@ -718,7 +751,10 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
+		
+		
+		
 		return 0;
-	}
+	} 
 
 }
