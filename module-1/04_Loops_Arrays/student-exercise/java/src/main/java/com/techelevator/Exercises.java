@@ -235,20 +235,20 @@ public class Exercises {
 		
 		for ( int i = 0; i < nums.length; i++) {
 			
-			if( nums[i] != 1) {
+			if( nums[i] == 1) {
 				
-				return true;
+				return false;
 			}
 			
-			if (nums[i] != 3) { 
+			if (nums[i] == 3) { 
 			
-				return true;
+				return false;
 				
 			}
 			
 		}
 		
-		return false;
+		return true;
 		
 	}
 
