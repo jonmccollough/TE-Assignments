@@ -8,13 +8,30 @@ public class TempConvert {
 		
 		Scanner myScanner = new Scanner(System.in);
 		
-		System.out.println("Hello! Please enter a temperature, and whether it's in (C)elsius or (F)ahrenheit.");
+		System.out.println("Hello! Please enter a temperature:" );
 		
-		String strMyTemp = myScanner.nextLine();
+		String strTempNum = myScanner.nextLine();
 		
-	//	double 
+		System.out.println( "Please enter C for (C)elsius or F for (F)ahrenheit.");
 		
-	//	if ( )
+		String strTempUnit = myScanner.nextLine();
+		
+		double myTemp = Double.parseDouble(strTempNum);
+		
+		if (strTempUnit.equalsIgnoreCase("C")){
+			
+			double celsiusToFahrenheitResult = (myTemp * 1.8 + 32 );
+			System.out.println(strTempNum + "C is " + celsiusToFahrenheitResult + "F");
+			
+		} else {
+			
+			double fahrenheitToCelsiusResult = ( (myTemp - 32) / 1.8);
+			System.out.println(strTempNum + "F is " + fahrenheitToCelsiusResult +"C");
+			
+			
+		}
+	
+	
 	}
 
 }
