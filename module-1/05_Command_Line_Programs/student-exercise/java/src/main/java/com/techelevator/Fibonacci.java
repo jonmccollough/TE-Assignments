@@ -13,22 +13,26 @@ public class Fibonacci {
 	
 	String strUserNum = myScanner.nextLine();
 	
+	int intUserNum = Int.parseInt(strUserNum);
+	
 	double doubleUserNum = Double.parseDouble(strUserNum);
 	
-	String arrayString = Arrays.toString();
+	int[] arrayFib = new int[0];
+	
+//	String arrayString = Arrays.toString();
 	
 	while( doubleUserNum < doubleUserNum) {
 		
 		for (int i = 0; i < doubleUserNum ; i++ ) {
 		
-			double fibZero = 0 ;
-			double fibOne = 1 ;
-			double fibSecond = fibZero + fibOne;
+			int fibZero = 0 ;
+			int fibOne = 1 ;
+			int fibSecond = fibZero + fibOne;
 			
-
+			System.out.println(fibSecond);
+			
 		
-		
-	} System.out.println(fibArray[])
+	} 
 	
 		
 		
