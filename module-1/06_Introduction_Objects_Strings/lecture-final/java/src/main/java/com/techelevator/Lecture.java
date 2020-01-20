@@ -2,157 +2,89 @@ package com.techelevator;
 
 public class Lecture {
 
-    /*
-    1. Return the created array
-    */
-    public int[] returnArray() {
-        int[] example = { 80, 8080, 443 };
-        return example;
-    }
+	public static void main(String[] args) {
 
-    /*
-    2. Return the first element of the array
-    */
-    public int returnFirstElement() {
-        int[] portNumbers = { 80, 8080, 443 };
-        return portNumbers[0];
-    }
+		System.out.println("************************************");
+		System.out.println("****** MAKING A STRING OBJECT ******");
+		System.out.println("************************************");
 
-    /*
-    3. Return the last element of the array
-    */
-    public int returnLastElement() {
-        int[] portNumbers = { 80, 8080, 443 };
-        return portNumbers[2];
-    }
+		/* The String class gets special treatment in the Java language.  One
+		 * example of this is that there is a literal representation of a
+		 * String (i.e. characters appearing between two double quotes.  This
+		 * is not the case for most classes */
 
-    /*
-    4. Return the first element of the array from the parameters
-    */
-    public int returnFirstElementOfParam(int[] passedInArray) {
-        return passedInArray[0];
-    }
+		String greeting = "Hello, World!"; // creates a new instance of String using a literal
+		System.out.println("greeting : " + greeting);
 
-    /*
-    5. Return the last element of the array from the parameters
-    */
-    public int returnLastElementOfParam(int[] passedInArray) {
-        return passedInArray[passedInArray.length - 1];
-    }
+		System.out.println();
+		System.out.println("******************************");
+		System.out.println("****** MEMBER METHODS ******");
+		System.out.println("******************************");
+		System.out.println();
 
-    /*
-    6. Here, a variable is defined within a block. How can we get the value of that outside of the block in order to
-       return it? There are a couple of different ways of doing this, what can you come up with?
-    */
-    public int returnVariableFromBlock(int number) {
+		/* Below are examples of calling various String methods */
 
-    	int result;
-    	
-        {
-            result = number * 5;
-        }
+		System.out.println("***** charAt *****");
 
-        return result;
-    }
-    
-    /*
-    7. What will the variable result be at the end of the method? Change the number in the logic expression so that
-       it returns true.
-    */
-    public boolean returnOperationInBlock() {
-        int result = 5;
+		String name = "Obama";
+		char first = name.charAt(0); // 'O'
+		char fourth = name.charAt(3); // 'm'
+		System.out.println(name);
+		System.out.println(first);
+		System.out.println(fourth);
 
-        {
-            int multiplier = 10;
-            result *= multiplier;
-        }
+		System.out.println("***** contains *****");
+		String hello = "Hello World!";
+		System.out.println("hello : " + hello);
+		boolean containsHello = hello.contains("Hello");
+		System.out.println("containsHello : " + containsHello);
+		boolean containsBogus = hello.contains("bogus");
+		System.out.println("containsBogus : " + containsBogus);
 
-        return result == 50;
-    }
+		/* Other commonly used methods:
+		 *
+		 * endsWith
+		 * startsWith
+		 * indexOf
+		 * lastIndexOf
+		 * length
+		 * substring
+		 * toLowerCase
+		 * toUpperCase
+		 * trim
+		 */
 
-    /*
-    8. Return the only variable that is in scope at the return statement.
-    */
-    public double returnInScopeVariable() {
-        double one = 1.0;
-        {
-            double three = 3.0;
-            one += three;
-            {
-                double four = 4.0;
-                three = four - one;
-                one++;
-            }
+		System.out.println();
+		System.out.println("**********************");
+		System.out.println("****** EQUALITY ******");
+		System.out.println("**********************");
+		System.out.println();
 
-            double five = 5.0;
-            double eight = five + three;
-        }
+		char[] helloArray = new char[] { 'H', 'e', 'l', 'l', 'o' };
+		String hello1 = new String(helloArray);
+		String hello2 = new String(helloArray);
 
-        return one;
-    }
+		/* Double equals will compare to see if the two variables, hello1 and
+		 * hello2 point to the same object in memory. Are they the same object? */
+		if (hello1 == hello2) {
+			System.out.println("They are equal!");
+		} else {
+			System.out.println(hello1 + " is not equal to " + hello2);
+		}
 
-    /*
-    9. How many times do we go through this loop? Change the number in the logic expression so that it returns true.
-    */
-    public boolean returnCounterFromLoop() {
+		String hello3 = hello1;
+		if (hello1 == hello3) {
+			System.out.println("hello1 is the same reference as hello3");
+		}
 
-        int[] arrayToLoopThrough = { 3, 4, 2, 9 };
+		/* So, to compare the values of two objects, we need to use the equals method.
+		 * Every object type has an equals method */
 
-        int counter = 0; // Must be started outside the block so that have access to it after the block
+		if (hello1.equals(hello2)) {
+			System.out.println("They are equal!");
+		} else {
+			System.out.println(hello1 + " is not equal to " + hello2);
+		}
 
-        for (int i = 0; i < arrayToLoopThrough.length; i++) {
-            counter++;
-        }
-
-        return counter == 4;
-    }
-
-    /*
-    10. This loop is counting incorrectly. What needs to change in the loop for it to count properly?
-    */
-    public boolean returnCorrectCount() {
-        int[] arrayToLoopThrough = { 4, 23, 9 };
-
-        int counter = 0;
-
-        //     Start;       Keep going while         Increment by one;
-        for (int i = 0; i < arrayToLoopThrough.length; i++) {
-            counter += 1;
-        }
-
-        return counter == 3;
-    }
-
-    /*
-    11. This loop is counting incorrectly. What needs to change in the loop for it to count properly?
-    */
-    public boolean returnCountCorrectTimes() {
-        int[] arrayToLoopThrough = { 4, 23, 9, 4, 33 };
-
-        int counter = 0;
-
-        //     Start;       Keep going while         Increment by one;
-        for (int i = 0; i < arrayToLoopThrough.length; i++) {
-            counter = counter + 1;
-        }
-
-        return counter == 5;
-    }
-
-    /*
-    12. We want this loop to only count every other item starting at zero. What needs to change in the loop for
-        it to do that?
-    */
-    public boolean returnSumEveryOtherNumber() {
-        int[] arrayToLoopThrough = { 4, 3, 4, 1, 4, 6 };
-
-        int sum = 0;
-
-        //     Start;       Keep going while       Increment by;
-        for (int i = 0; i < arrayToLoopThrough.length; i = i + 2) {
-            sum = sum + arrayToLoopThrough[i];
-        }
-
-        return sum == 12;
-    }
+	}
 }

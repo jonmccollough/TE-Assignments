@@ -1,164 +1,332 @@
 package com.techelevator;
 
 public class Exercises {
-	
+
 	/*
-	 1. Given an array of ints, return true if 6 appears as either the first or last element in the array. 
-	 The array will be length 1 or more.
-	 firstLast6([1, 2, 6]) → true
-	 firstLast6([6, 1, 2, 3]) → true
-	 firstLast6([13, 6, 1, 2, 3]) → false
+	 Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+	 helloName("Bob") → "Hello Bob!"
+	 helloName("Alice") → "Hello Alice!"
+	 helloName("X") → "Hello X!"
 	 */
-	public boolean firstLast6(int[] nums) {
+	public String helloName(String name) {
+		return null;
+	}
+
+	/*
+	 Given two strings, a and b, return the result of putting them together in the order abba,
+	 e.g. "Hi" and "Bye" returns "HiByeByeHi".
+	 makeAbba("Hi", "Bye") → "HiByeByeHi"
+	 makeAbba("Yo", "Alice") → "YoAliceAliceYo"
+	 makeAbba("What", "Up") → "WhatUpUpWhat"
+	 */
+	public String makeAbba(String a, String b) {
+		return null;
+	}
+
+	/*
+	 The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text. In this example,
+	 the "i" tag makes <i> and </i> which surround the word "Yay". Given tag and word strings, create the
+	 HTML string with tags around the word, e.g. "<i>Yay</i>".
+	 makeTags("i", "Yay") → "<i>Yay</i>"
+	 makeTags("i", "Hello") → "<i>Hello</i>"
+	 makeTags("cite", "Yay") → "<cite>Yay</cite>"
+	 */
+	public String makeTags(String tag, String word) {
+		return null;
+	}
+
+	/*
+	 Given an "out" string length 4, such as "<<>>", and a word, return a new string where the word is in the
+	 middle of the out string, e.g. "<<word>>". Note: use str.substring(i, j) to extract the String starting
+	 at index i and going up to but not including index j.
+	 makeOutWord("<<>>", "Yay") → "<<Yay>>"
+	 makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
+	 makeOutWord("[[]]", "word") → "[[word]]"
+	 */
+	public String makeOutWord(String out, String word) {
+		return null;
+	}
+
+	/*
+	 Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string
+	 length will be at least 2.
+	 extraEnd("Hello") → "lololo"
+	 extraEnd("ab") → "ababab"
+	 extraEnd("Hi") → "HiHiHi"
+	 */
+	public String extraEnd(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string, return the string made of its first two chars, so the String "Hello" yields "He". If the
+	 string is shorter than length 2, return whatever there is, so "X" yields "X", and the empty string ""
+	 yields the empty string "". Note that str.length() returns the length of a string.
+	 firstTwo("Hello") → "He"
+	 firstTwo("abcdefg") → "ab"
+	 firstTwo("ab") → "ab"
+	 */
+	public String firstTwo(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+	 firstHalf("WooHoo") → "Woo"
+	 firstHalf("HelloThere") → "Hello"
+	 firstHalf("abcdef") → "abc"
+	 */
+	public String firstHalf(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string, return a version without the first and last char, so "Hello" yields "ell".
+	 The string length will be at least 2.
+	 withoutEnd("Hello") → "ell"
+	 withoutEnd("java") → "av"
+	 withoutEnd("coding") → "odin"
+	 */
+	public String withoutEnd(String str) {
+		return null;
+	}
+
+	/*
+	 Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string
+	 on the outside and the longer string on the inside. The strings will not be the same length, but
+	 they may be empty (length 0).
+	 comboString("Hello", "hi") → "hiHellohi"
+	 comboString("hi", "Hello") → "hiHellohi"
+	 comboString("aaa", "b") → "baaab"
+	 */
+	public String comboString(String a, String b) {
+		return null;
+	}
+
+	/*
+	 Given 2 strings, return their concatenation, except omit the first char of each. The strings will
+	 be at least length 1.
+	 nonStart("Hello", "There") → "ellohere"
+	 nonStart("java", "code") → "avaode"
+	 nonStart("shotl", "java") → "hotlava"
+	 */
+	public String nonStart(String a, String b) {
+		return null;
+	}
+
+	/*
+	 Given a string, return a "rotated left 2" version where the first 2 chars are moved to the end.
+	 The string length will be at least 2.
+	 left2("Hello") → "lloHe"
+	 left2("java") → "vaja"
+	 left2("Hi") → "Hi"
+	 */
+	public String left2(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string, return a "rotated right 2" version where the last 2 chars are moved to the start.
+	 The string length will be at least 2.
+	 right2("Hello") → "loHel"
+	 right2("java") → "vaja"
+	 right2("Hi") → "Hi"
+	 */
+	public String right2(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string, return a string length 1 from its front, unless front is false, in which case
+	 return a string length 1 from its back. The string will be non-empty.
+	 theEnd("Hello", true) → "H"
+	 theEnd("Hello", false) → "o"
+	 theEnd("oh", true) → "o"
+	 */
+	public String theEnd(String str, boolean front) {
+		return null;
+	}
+
+	/*
+	 Given a string, return a version without both the first and last char of the string. The string
+	 may be any length, including 0.
+	 withoutEnd2("Hello") → "ell"
+	 withoutEnd2("abc") → "b"
+	 withoutEnd2("ab") → ""
+	 */
+	public String withoutEnd2(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string of even length, return a string made of the middle two chars, so the string "string"
+	 yields "ri". The string length will be at least 2.
+	 middleTwo("string") → "ri"
+	 middleTwo("code") → "od"
+	 middleTwo("Practice") → "ct"
+	 */
+	public String middleTwo(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string, return true if it ends in "ly".
+	 endsLy("oddly") → true
+	 endsLy("y") → false
+	 endsLy("oddy") → false
+	 */
+	public boolean endsLy(String str) {
 		return false;
 	}
 
 	/*
-	 2. Given an array of ints, return true if the array is length 1 or more, and the first element and
-	 the last element are equal.
-	 sameFirstLast([1, 2, 3]) → false
-	 sameFirstLast([1, 2, 3, 1]) → true
-	 sameFirstLast([1, 2, 1]) → true
+	 Given a string and an int n, return a string made of the first and last n chars from the string. The
+	 string length will be at least n.
+	 nTwice("Hello", 2) → "Helo"
+	 nTwice("Chocolate", 3) → "Choate"
+	 nTwice("Chocolate", 1) → "Ce"
 	 */
-	public boolean sameFirstLast(int[] nums) {
+	public String nTwice(String str, int n) {
+		return null;
+	}
+
+	/*
+	 Given a string and an index, return a string length 2 starting at the given index. If the index is
+	 too big or too small to define a string length 2, use the first 2 chars. The string length will be
+	 at least 2.
+	 twoChar("java", 0) → "ja"
+	 twoChar("java", 2) → "va"
+	 twoChar("java", 3) → "ja"
+	 */
+	public String twoChar(String str, int index) {
+		return null;
+	}
+
+	/*
+	 Given a string of odd length, return the string length 3 from its middle, so "Candy" yields "and".
+	 The string length will be at least 3.
+	 middleThree("Candy") → "and"
+	 middleThree("and") → "and"
+	 middleThree("solving") → "lvi"
+	 */
+	public String middleThree(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as with
+	 "badxxx" or "xbadxx" but not "xxbadxx". The string may be any length, including 0. Note: use .equals()
+	 to compare 2 strings.
+	 hasBad("badxx") → true
+	 hasBad("xbadxx") → true
+	 hasBad("xxbadxx") → false
+	 */
+	public boolean hasBad(String str) {
 		return false;
 	}
 
 	/*
-	 3. Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
-	 makePi() → [3, 1, 4]
+	 Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+	 stringTimes("Hi", 2) → "HiHi"
+	 stringTimes("Hi", 3) → "HiHiHi"
+	 stringTimes("Hi", 1) → "Hi"
 	 */
-	public int[] makePi() {
-		return new int[] {};
+	public String stringTimes(String str, int n) {
+		return null;
 	}
 
 	/*
-	 4. Given 2 arrays of ints, a and b, return true if they have the same first element or they have 
-	 the same last element. Both arrays will be length 1 or more.
-	 commonEnd([1, 2, 3], [7, 3]) → true
-	 commonEnd([1, 2, 3], [7, 3, 2]) → false
-	 commonEnd([1, 2, 3], [1, 3]) → true
+	 Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or
+	 whatever is there if the string is less than length 3. Return n copies of the front;
+	 frontTimes("Chocolate", 2) → "ChoCho"
+	 frontTimes("Chocolate", 3) → "ChoChoCho"
+	 frontTimes("Abc", 3) → "AbcAbcAbc"
 	 */
-	public boolean commonEnd(int[] a, int[] b) {
-		return false;
+	public String frontTimes(String str, int n) {
+		return null;
 	}
 
 	/*
-	 5. Given an array of ints length 3, return the sum of all the elements.
-	 sum3([1, 2, 3]) → 6
-	 sum3([5, 11, 2]) → 18
-	 sum3([7, 0, 0]) → 7
+	 Count the number of "xx" in the given string. We'll say that overlapping is allowed, so "xxx" contains 2 "xx".
+	 countXX("abcxx") → 1
+	 countXX("xxx") → 2
+	 countXX("xxxx") →
 	 */
-	public int sum3(int[] nums) {
+	public int countXX(String str) {
 		return 0;
 	}
 
 	/*
-	 6. Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} 
-	 yields {2, 3, 1}.
-	 rotateLeft3([1, 2, 3]) → [2, 3, 1]
-	 rotateLeft3([5, 11, 9]) → [11, 9, 5]
-	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
+	 Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
+	 doubleX("axxbb") → true
+	 doubleX("axaxax") → false
+	 doubleX("xxxxx") → true
 	 */
-	public int[] rotateLeft3(int[] nums) {
-		return new int[] {};
-	}
-
-	/*
-	 7. Given an array of ints length 3, return a new array with the elements in reverse order, so 
-	 {1, 2, 3} becomes {3, 2, 1}.
-	 reverse3([1, 2, 3]) → [3, 2, 1]
-	 reverse3([5, 11, 9]) → [9, 11, 5]
-	 reverse3([7, 0, 0]) → [0, 0, 7]
-	 */
-	public int[] reverse3(int[] nums) {
-		return new int[] {};
-	}
-
-	/*
-	 8. Given an array of ints length 3, figure out which is larger between the first and last elements 
-	 in the array, and set all the other elements to be that value. Return the changed array.
-	 maxEnd3([1, 2, 3]) → [3, 3, 3]
-	 maxEnd3([11, 5, 9]) → [11, 11, 11]
-	 maxEnd3([2, 11, 3]) → [3, 3, 3]
-	 */
-	public int[] maxEnd3(int[] nums) {
-		return new int[] {};
-	}
-
-	/*
-	 9. Given an array of ints, return the sum of the first 2 elements in the array. If the array length
-	  is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.
-	 sum2([1, 2, 3]) → 3
-	 sum2([1, 1]) → 2
-	 sum2([1, 1, 1, 1]) → 2
-	 */
-	public int sum2(int[] nums) {
-		return 0;
-	}
-
-	/*
-	 10. Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle 
-	 elements.
-	 middleWay([1, 2, 3], [4, 5, 6]) → [2, 5]
-	 middleWay([7, 7, 7], [3, 8, 0]) → [7, 8]
-	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
-	 */
-	public int[] middleWay(int[] a, int[] b) {
-		return new int[] {};
-	}
-
-	/*
-	 11. Return the number of even ints in the given array. Note: the % "mod" operator computes the 
-	 remainder, e.g. 5 % 2 is 1.
-	 countEvens([2, 1, 2, 3, 4]) → 3
-	 countEvens([2, 2, 0]) → 3
-	 countEvens([1, 3, 5]) → 0
-	 */
-	public int countEvens(int[] nums) {
-		return 0;
-	}
-
-	/*
-	 12. Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 
-	 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do 
-	 not count.
-	 sum13([1, 2, 2, 1]) → 6
-	 sum13([1, 1]) → 2
-	 sum13([1, 2, 2, 1, 13]) → 6
-	 */
-	public int sum13(int[] nums) {
-		return 0;
-	}
-
-	/*
-	 13. Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
-	 has22([1, 2, 2]) → true
-	 has22([1, 2, 1, 2]) → false
-	 has22([2, 1, 2]) → false
-	 */
-	public boolean has22(int[] nums) {
-		return false;
-	}
-	
-	/*
-	 14. Given an array of ints, return true if the array contains no 1's and no 3's.
-	 lucky13([0, 2, 4]) → true
-	 lucky13([1, 2, 3]) → false
-	 lucky13([1, 2, 4]) → false
-	 */
-	public boolean lucky13(int[] nums) {
+	public boolean doubleX(String str) {
 		return false;
 	}
 
 	/*
-	 15. Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
-	 sum28([2, 3, 2, 2, 4, 2]) → true
-	 sum28([2, 3, 2, 2, 4, 2, 2]) → false
-	 sum28([1, 2, 3, 4]) → false
+	 Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+	 stringBits("Hello") → "Hlo"
+	 stringBits("Hi") → "H"
+	 stringBits("Heeololeo") → "Hello"
 	 */
-	public boolean sum28(int[] nums) {
-		return false;
+	public String stringBits(String str) {
+		return null;
+	}
+
+	/*
+	 Given a non-empty string like "Code" return a string like "CCoCodCode".
+	 stringSplosion("Code") → "CCoCodCode"
+	 stringSplosion("abc") → "aababc"
+	 stringSplosion("ab") → "aab"
+	 */
+	public String stringSplosion(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string, return the count of the number of times that a substring length 2 appears in the string and
+	 also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
+	 last2("hixxhi") → 1
+	 last2("xaxxaxaxx") → 1
+	 last2("axxxaaxx") → 2
+	 */
+	public int last2(String str) {
+		return 0;
+	}
+
+	/*
+	 Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or end
+	 should not be removed.
+	 stringX("xxHxix") → "xHix"
+	 stringX("abxxxcd") → "abcd"
+	 stringX("xabxxxcdx") → "xabcdx"
+	 */
+	public String stringX(String str) {
+		return null;
+	}
+
+	/*
+	 Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".
+	 altPairs("kitten") → "kien"
+	 altPairs("Chocolate") → "Chole"
+	 altPairs("CodingHorror") → "Congrr"
+	 */
+	public String altPairs(String str) {
+		return null;
+	}
+
+	/*
+	 Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but
+	 the "a" can be any char. The "yak" strings will not overlap.
+	 stringYak("yakpak") → "pak"
+	 stringYak("pakyak") → "pak"
+	 stringYak("yak123ya") → "123ya"
+	 */
+	public String stringYak(String str) {
+		return null;
 	}
 
 }
