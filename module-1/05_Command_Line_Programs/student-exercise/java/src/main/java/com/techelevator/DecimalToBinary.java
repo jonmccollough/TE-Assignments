@@ -10,7 +10,15 @@ public class DecimalToBinary {
 		
 		System.out.println("Please enter in a series of decimal values (separated by spaces):");
 		
+		String strDecimals = myScanner.nextLine();
 		
+		String[] decimalsArray = strDecimals.split(" ");
+		
+		for (int i = 0; i < decimalsArray.length; i++  ) {
+			
+			
+			
+		}
 	}
 
 }
