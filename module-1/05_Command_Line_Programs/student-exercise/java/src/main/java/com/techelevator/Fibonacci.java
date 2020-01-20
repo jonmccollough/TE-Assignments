@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Fibonacci {
@@ -10,21 +11,24 @@ public class Fibonacci {
 	
 	System.out.println("Hello, please enter the fibonacci number:");
 	
-	String userNum = myScanner.nextLine();
+	String strUserNum = myScanner.nextLine();
 	
-	double userNumDouble = Double.parseDouble(userNum);
+	double doubleUserNum = Double.parseDouble(strUserNum);
 	
-	while( userNumDouble > userNumDouble) {
-		
-		
-		
+	String arrayString = Arrays.toString();
 	
-//	for (int i = 0; i < userNumDouble ; i++ ) {
+	while( doubleUserNum < doubleUserNum) {
 		
-//		double fibArray = userNumDouble + ;
+		for (int i = 0; i < doubleUserNum ; i++ ) {
+		
+			double fibZero = 0 ;
+			double fibOne = 1 ;
+			double fibSecond = fibZero + fibOne;
+			
+
 		
 		
-	}
+	} System.out.println(fibArray[])
 	
 		
 		
