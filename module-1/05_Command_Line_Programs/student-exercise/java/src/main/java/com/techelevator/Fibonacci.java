@@ -13,29 +13,43 @@ public class Fibonacci {
 	
 	String strUserNum = myScanner.nextLine();
 	
-	int intUserNum = Int.parseInt(strUserNum);
+//	int intUserNum = Integer.parseInt(strUserNum);   // int or array??
 	
-	double doubleUserNum = Double.parseDouble(strUserNum);
+//	double doubleUserNum = Double.parseDouble(strUserNum);
 	
-	int[] arrayFib = new int[0];
+//	int[] arrayFib = new int[0];
+	
+	int fibA = 0 ;
+	int fibB = 1 ;
+	int fibC = 0 ;
+	int intUserNum = Integer.parseInt(strUserNum);  //start an array with user number
+	System.out.print(fibA + " " + fibB + " ");
 	
 //	String arrayString = Arrays.toString();
+		
+	for (int i = 1; i <= intUserNum ; i++) {
+		
+		i = i + fibC;
 	
-	while( doubleUserNum < doubleUserNum) {
+		fibC = fibA + fibB;
+		fibA = fibB;
+		fibB = fibC;
 		
-		for (int i = 0; i < doubleUserNum ; i++ ) {
 		
-			int fibZero = 0 ;
-			int fibOne = 1 ;
-			int fibSecond = fibZero + fibOne;
+//		while (fibB <= intUserNum) {   // going beyond the entered number
+//			
+//			
+//		
+//			fibC = fibA + fibB;
+//			fibA = fibB;
+//			fibB = fibC;
+		
 			
-			System.out.println(fibSecond);
+		System.out.print(fibC + " ");
+		
 			
-		
-	} 
-	
-		
-		
+	} //	System.out.println(Arrays.toString(arrayFib));
+
 		
 	}
 
