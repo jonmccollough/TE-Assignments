@@ -90,19 +90,13 @@ public class Exercises {
 		
 		List <Double> dividedByTwo = new ArrayList<Double>();
 		
-		
-		
 		double dubArrayDiv;
-		
-	//	if ( intArray.length > 0 ) {
 		
 		for( int i = 0; i < intArray.length ; i++ ) {
 		
 			dubArrayDiv = ( intArray[i] / 2.0 );
 				
 			dividedByTwo.add(dubArrayDiv); 
-			
-	//	}
 		
 		}	return dividedByTwo;
 		
@@ -115,7 +109,21 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 64362
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+			
+		int maxNum = 0;
+		
+		for (int i = 0; i < integerList.size() ; i++) {
+			
+			if (integerList.get(i) > maxNum) {
+				
+				maxNum = integerList.get(i);
+				
+			}
+			
+		}
+		
+		return maxNum;
+		
 	}
 
 	/*
@@ -125,7 +133,19 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		
+	List <Integer> oddValues = new ArrayList<Integer>();
+		
+		for( int i = 0; i < integerArray.length ; i++ ) {
+		
+			if ( (integerArray[i] % 2.0 ) > 0) {
+				
+			oddValues.add(integerArray[i]); 
+			
+			}
+		
+		}	return oddValues;
+		
 	}
 
 	/*
@@ -136,7 +156,24 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
-		return false;
+		
+		int counter = 0;
+		
+		for (int i=0; i < integerList.size() ; i++ ) {
+		
+			if ( integerList.get(i).equals(intToFind)) {
+			
+				counter += 1;
+		}
+			
+		} if (counter >= 2 ) {
+		
+			return true; 
+			
+		} else {
+			
+			return false;}
+			
 	}
 
 	/*
