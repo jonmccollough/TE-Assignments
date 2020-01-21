@@ -474,7 +474,7 @@ public class Exercises {
 			
 			charStr += (str.substring(4, 6));
 			
-			charStr += (str.substring(8, 10));
+			charStr += (str.substring(8, 9));
 			
 	//		return charStr;
 				
