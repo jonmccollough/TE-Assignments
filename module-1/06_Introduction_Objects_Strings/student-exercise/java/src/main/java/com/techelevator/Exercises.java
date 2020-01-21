@@ -374,7 +374,7 @@ public class Exercises {
 	 */
 	public boolean doubleX(String str) {
 		
-		if ( str.contains("xx"	)){
+		if ( str.contains("xx") && str.substring( (str.indexOf("x")), (str.indexOf("x") + 2) ).equals("xx")){
 			
 			return true;
 			
@@ -454,9 +454,31 @@ public class Exercises {
 	 */
 	public String stringX(String str) {
 		
+		String noXstr = "";
+		String frontX = "";
+		String lastX = "";
+		String strBlank = "";
 		
+		noXstr = str.replace("x", "") ;
 		
-		return null;
+		if( str.length() == 0 ) {
+			
+			return strBlank;
+			
+		} else if ( str.substring(0, 1).contains("x" ) ){
+			
+			frontX = "x";
+			
+		} if (str.endsWith("x") && ( str.length() > 1 )) {
+			
+			lastX = "x";
+			
+		} if (str.substring(0, 1).contains("x" ) && str.endsWith("x") && ( str.length() > 1 ) ) {
+			
+			frontX = "x";
+			lastX = "x";
+			
+		} return frontX + noXstr + lastX;
 		
 	}
 
@@ -468,27 +490,52 @@ public class Exercises {
 	 */
 	public String altPairs(String str) {
 		
-		String charStr = "";
+		String strFirst = "";
+		String strSecond = "";
+		String strLast = "";
+		String strLongLast = "";
 		
-		if ( str.length() >= 8 ) {
+		if ( str.length() > 12 ) {
 			
-			charStr += (str.substring(0, 2));
+			strFirst = (str.substring(0, 2));
 			
-			charStr += (str.substring(4, 6));
+			strSecond = (str.substring(4, 6));
 			
-			charStr += (str.substring(8, 9));
+			strLast = (str.substring(8, 10));
 			
-	//		return charStr;
+			strLongLast = (str.substring(12, 14));
+		
+		} else if ( str.length() > 9 ) {
+			
+			strFirst = (str.substring(0, 2));
+			
+			strSecond = (str.substring(4, 6));
+			
+			strLast = (str.substring(8, 10)); 
+			
+		} else if ( str.length() > 7 ) {
 				
-		} else if (str.length() >= 6){ 	
+			strFirst = (str.substring(0, 2));
+				
+			strSecond = (str.substring(4, 6));
+				
+			strLast = (str.substring(8, 9));
+				
+		} else if (str.length() > 3){ 	
 			
-			charStr += (str.substring(0, 2));
+			strFirst = (str.substring(0, 2));
 		
-			charStr += (str.substring(4, 6));
+			strSecond = (str.substring(4, 6));
+			
+		} else if (str.length() > 1){ 	
+			
+			strFirst = (str.substring(0, 2));
+			
+		} else if (str.length() >= 1){ 	
+			
+			strFirst = (str.substring(0, 1));
 		
-		//	return charStr;
-		
-		} return charStr;
+		}  return strFirst + strSecond + strLast + strLongLast; 
 		
 	}
 
