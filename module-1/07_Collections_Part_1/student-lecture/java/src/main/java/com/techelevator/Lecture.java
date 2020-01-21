@@ -43,6 +43,12 @@ public class Lecture {
 		System.out.println("####################");
 		System.out.println("Lists allow elements to be inserted in the middle");
 		System.out.println("####################");
+		
+		names.add(2, "Laegartha");
+		
+		for ( int i = 0; i < names.size(); i++) {
+			System.out.println(names.get(i));
+		}
 
 		names.add(2, "Laegartha");
 		
@@ -111,6 +117,16 @@ public class Lecture {
 		System.out.println("       QUEUES");
 		System.out.println("####################");
 		System.out.println();
+		
+		Queue<String> orders = new LinkedList<String>();
+		orders.offer("1 - Sandwich");
+		orders.offer("2 - Ramen");
+		orders.offer("3 - Salad");
+		
+		while ( orders.size() > 0 ) {
+			String nextOrder = orders.poll();
+			System.out.println("Order: " + nextOrder);
+		}
 
 		/////////////////////
 		// PROCESSING ITEMS IN A QUEUE
@@ -133,6 +149,9 @@ public class Lecture {
 		System.out.println("       STACKS");
 		System.out.println("####################");
 		System.out.println();
+		
+		
+		
 
 		////////////////////
 		// PUSHING ITEMS TO THE STACK
@@ -147,6 +166,11 @@ public class Lecture {
 		////////////////////
 		// POPPING OFF THE STACK
 		////////////////////
+		
+		while ( browserHistory.size() > 0 ) {
+			String hisotryItem = browserHistory.pop();
+			System.out.println(hisotryItem);
+		}
 
 		while( browserHistory.size() > 0 ) {
 			
