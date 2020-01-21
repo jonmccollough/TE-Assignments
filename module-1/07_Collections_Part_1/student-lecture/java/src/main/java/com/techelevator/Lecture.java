@@ -132,7 +132,7 @@ public class Lecture {
 		// PROCESSING ITEMS IN A QUEUE
 		/////////////////////
 		
-		Queue<String> orders = new LinkedList<String>();
+//		Queue<String> orders = new LinkedList<String>();
 		orders.offer("1 - Sandwich");
 		orders.offer("2 - Ramen");
 		orders.offer("3 - Salad");

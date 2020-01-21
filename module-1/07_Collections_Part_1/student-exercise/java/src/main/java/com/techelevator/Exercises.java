@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -22,7 +23,10 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"]
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		
+		List<String> newListArray = Arrays.asList(stringArray);
+		
+		return newListArray;
 	}
 
 	/*
@@ -32,7 +36,10 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
-		return null;
+		
+		String[] arrayList = stringList.toArray(new String[stringList.size()]);
+		
+		return arrayList;
 	}
 
 	/*
@@ -43,7 +50,24 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		
+		List <String> notFourWordsStr = new ArrayList<String>();
+		
+		for( int i = 0; i < stringArray.length ; i++ ) {
+		
+			if (stringArray[i].length() != 4) {
+				
+				notFourWordsStr.add(stringArray[i]); 
+			}
+			
+		//	 stringArray.remove(stringArray.length.equals(4));
+		
+		}	return notFourWordsStr;
+		
+	//	List<String> noFourLetterWordArrayList = Arrays.asList(stringArray);
+		
+	//	return noFourLetterWordArrayList;
+		
 	}
 
 	/*
