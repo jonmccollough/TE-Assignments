@@ -454,6 +454,8 @@ public class Exercises {
 	 */
 	public String stringX(String str) {
 		
+		
+		
 		return null;
 		
 	}
@@ -502,6 +504,7 @@ public class Exercises {
 	public String stringYak(String str) {
 		
 		return str.replace("yak", "");
+		
 	}
 
 }
