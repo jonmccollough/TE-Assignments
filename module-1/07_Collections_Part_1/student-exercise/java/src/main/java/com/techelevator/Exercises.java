@@ -59,14 +59,8 @@ public class Exercises {
 				
 				notFourWordsStr.add(stringArray[i]); 
 			}
-			
-		//	 stringArray.remove(stringArray.length.equals(4));
 		
 		}	return notFourWordsStr;
-		
-	//	List<String> noFourLetterWordArrayList = Arrays.asList(stringArray);
-		
-	//	return noFourLetterWordArrayList;
 		
 	}
 
@@ -79,7 +73,11 @@ public class Exercises {
 		-> ["way", "the", "all", "jingle", "bells", "jingle", "bells", "jingle"]
 	 */
 	public List<String> reverseList(List<String> stringList) {
-		return null;
+		
+		Collections.reverse(stringList);
+		
+		return stringList;
+		
 	}
 
 	/*
@@ -89,7 +87,25 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-		return null;
+		
+		List <Double> dividedByTwo = new ArrayList<Double>();
+		
+		
+		
+		double dubArrayDiv;
+		
+	//	if ( intArray.length > 0 ) {
+		
+		for( int i = 0; i < intArray.length ; i++ ) {
+		
+			dubArrayDiv = ( intArray[i] / 2.0 );
+				
+			dividedByTwo.add(dubArrayDiv); 
+			
+	//	}
+		
+		}	return dividedByTwo;
+		
 	}
 
 	/*
