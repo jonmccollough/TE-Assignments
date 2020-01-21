@@ -61,7 +61,7 @@ public class Lecture {
 		String hello3 = "Hello";
 		
 		System.out.println(helloArray);  //prints whole array
-		System.out.println(Arrays.toString(helloArray));
+		System.out.println(Arrays.toString(helloArray)); //prints each separated element of index
 		
 		System.out.println(hello1 + " " + hello2 + " " + hello3);
 

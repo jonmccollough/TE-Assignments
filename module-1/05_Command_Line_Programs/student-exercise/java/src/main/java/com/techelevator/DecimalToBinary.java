@@ -16,8 +16,26 @@ public class DecimalToBinary {
 		
 		for (int i = 0; i < decimalsArray.length; i++  ) {
 			
-			
-			
+				int element1 = Integer.parseInt( decimalsArray[i]);
+				
+				int quotient2 = element1;
+				
+				int remainder3 = 0;
+				
+				String userDigit = "";
+				
+				String binaryOut = "";
+				
+				while (0 < quotient2) {
+					remainder3 = quotient2 % 2;
+					quotient2 = quotient2 / 2;
+					
+					userDigit = String.valueOf(remainder3);
+					
+					binaryOut = userDigit + binaryOut;
+					
+				}
+			System.out.println(element1 + " in binary is " + binaryOut);
 		}
 	}
 

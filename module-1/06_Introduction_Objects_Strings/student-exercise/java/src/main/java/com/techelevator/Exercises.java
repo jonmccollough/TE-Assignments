@@ -440,6 +440,7 @@ public class Exercises {
 				if( str.substring( i , (i + 2) ).contentEquals(strEnd) )
 					counterL2 ++;
 			}
+			
 		} return counterL2;
 	
 	}
