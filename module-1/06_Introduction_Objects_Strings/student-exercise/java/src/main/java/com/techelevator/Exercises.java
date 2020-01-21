@@ -453,7 +453,9 @@ public class Exercises {
 	 stringX("xabxxxcdx") → "xabcdx"
 	 */
 	public String stringX(String str) {
+		
 		return null;
+		
 	}
 
 	/*
@@ -463,8 +465,32 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		return null;
+		
+		String charStr = "";
+		
+		if ( str.length() >= 8 ) {
+			
+			charStr += (str.substring(0, 2));
+			
+			charStr += (str.substring(4, 6));
+			
+			charStr += (str.substring(8, 10));
+			
+	//		return charStr;
+				
+		} else if (str.length() >= 6){ 	
+			
+			charStr += (str.substring(0, 2));
+		
+			charStr += (str.substring(4, 6));
+		
+		//	return charStr;
+		
+		} return charStr;
+		
 	}
+
+		
 
 	/*
 	 Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but
@@ -474,7 +500,8 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-		return null;
+		
+		return str.replace("yak", "");
 	}
 
 }
