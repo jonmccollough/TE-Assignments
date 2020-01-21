@@ -152,8 +152,9 @@ public class Exercises {
 	 */
 	public String right2(String str) {
 		
-		return (str.substring(str.length()-2 ) + (str.substring(2, str.length()-2 ) ) );
+		String strLast = (str.substring(str.length()-2 , str.length() ) );
 		
+		return strLast + str.substring(0, str.length() -2 );
 	}
 
 	/*
@@ -254,7 +255,6 @@ public class Exercises {
 		return str.substring(index, index + 2 ); 
 		
 		}
-		
 		
 	}
 
@@ -374,7 +374,7 @@ public class Exercises {
 	 */
 	public boolean doubleX(String str) {
 		
-		if ( str.contains("xx")){
+		if ( str.contains("xx"	)){
 			
 			return true;
 			
@@ -391,7 +391,14 @@ public class Exercises {
 	 stringBits("Heeololeo") → "Hello"
 	 */
 	public String stringBits(String str) {
-		return null;
+		String strLast = "";
+		
+		for ( int i = 0; i < str.length(); i+= 2) {
+			
+			strLast += str.charAt(i);
+		}
+	
+		return strLast;
 	}
 
 	/*
@@ -402,7 +409,13 @@ public class Exercises {
 	 */
 	public String stringSplosion(String str) {
 		
-		return null;
+		String strSplosion = "";
+		
+		for(int i = 0; i < str.length()+1 ; i++ )
+		
+			strSplosion += str.substring(0, i );
+		
+		return strSplosion;
 	}
 
 	/*
@@ -413,7 +426,22 @@ public class Exercises {
 	 last2("axxxaaxx") → 2
 	 */
 	public int last2(String str) {
-		return 0;
+		
+		int strL2 = str.length()-2;
+		int counterL2 = 0;
+		
+		
+		if (strL2 >= 0 ) {
+			
+			String strEnd = str.substring(strL2 );
+			
+			for (int i = 0; i < strL2; i++ ) {
+			
+				if( str.substring( i , (i + 2) ).contentEquals(strEnd) )
+					counterL2 ++;
+			}
+		} return counterL2;
+	
 	}
 
 	/*
