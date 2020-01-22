@@ -229,8 +229,8 @@ public class Exercises {
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
 		
-		Queue<Integer> queueOne = new LinkedList<Integer>();
-		Queue<Integer> queueTwo = new LinkedList<Integer>();
+//		Queue<Integer> queueOne = new LinkedList<Integer>();
+//		Queue<Integer> queueTwo = new LinkedList<Integer>();
 
 		List <Integer> outputList = new ArrayList<Integer>();
 		
@@ -242,56 +242,13 @@ public class Exercises {
 			
 			}
 			
-			if( i< listTwo.size()) {
+			if( i < listTwo.size()) {
 			
 				outputList.add(listTwo.get(i));
 			
 			}
 		
-		
 		}	return outputList;
-		
-		
-	//	int intListSizeOne = listOne.size();
-	//	int intListSizeTwo = listTwo.size();
-		
-//		for( int i = 0; i < listOne.size(); i++ ) {
-//			
-//		if (listOne.size() >= listTwo.size() ) {
-//			
-//			while( listTwo.size() > 0 ) {
-//				
-//				outputList.add(queueOne.poll());
-//				outputList.add(queueTwo.poll());
-//				
-//			//	return outputList;
-//				
-//			} while (listOne.size() > listTwo.size() ) {
-//				
-//				outputList.add(queueTwo.poll() );
-//			//	return outputList;
-//			}
-//			
-//		} //return outputList;
-//		
-//		if(listOne.size() < listTwo.size() ) {
-//			
-//			while( queueOne.size() > 0 ) {
-//				
-//				outputList.add(queueTwo.poll());
-//				outputList.add(queueOne.poll());
-//			//	return outputList;
-//				
-//			} while (queueTwo.size() > queueOne.size() ) {
-//				
-//				outputList.add( queueOne.poll() );
-//			//	return outputList;
-//				
-//			}
-//			
-//		} 
-		
-//		} return outputList;
 		
 	}
 
@@ -306,17 +263,43 @@ public class Exercises {
 	 */
 	public List<Integer> boardingGate(List<Integer> seatNumberList) {
 		
-		Queue<Integer> oneTo10 = new LinkedList<Integer>();
+		Queue<Integer> oneToTen = new LinkedList<Integer>();
 		Queue<Integer> elevenToTwenty = new LinkedList<Integer>();
-		Queue<Integer> twentyTwoToThirty = new LinkedList<Integer>();
+		Queue<Integer> twentyOneToThirty = new LinkedList<Integer>();
+		
+		List<Integer> totalBoardingList = new ArrayList<Integer>();
 		
 		for ( int i = 0; i < seatNumberList.size(); i++ ) {
 			
+			if ( seatNumberList.get(i) >= 1 && seatNumberList.get(i) <= 10 ) {
+				
+				oneToTen.offer(seatNumberList.get(i));
+				
+			} else if ( seatNumberList.get(i) >= 11 && seatNumberList.get(i) <= 20 ) {
+				
+				elevenToTwenty.offer(seatNumberList.get(i));
+			
+			} else if (seatNumberList.get(i) >=21 && seatNumberList.get(i) <= 30) {
+				
+				twentyOneToThirty.offer(seatNumberList.get(i));
+				
+			}
 			
 		}
 		
-		return null;
+			totalBoardingList.addAll(oneToTen);
+			totalBoardingList.addAll(elevenToTwenty);
+			totalBoardingList.addAll(twentyOneToThirty);
+		
+		
+			return totalBoardingList;
 		
 	}
 
 }
+
+
+
+
+
+
