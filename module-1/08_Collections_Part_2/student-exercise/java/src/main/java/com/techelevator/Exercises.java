@@ -275,9 +275,24 @@ public class Exercises {
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
 		
+		Map<String, Boolean> dupStr = new HashMap<String, Boolean>();
 		
+		for(String str : words ) {
+			
+			if( dupStr.containsKey(str)) {
+				
+				dupStr.get(str);
+				dupStr.put(str, true);
+				
+			} else {
+				
+				dupStr.put(str, false);
+				
+			}
+			
+		}
 		
-		return null;
+		return dupStr;
 	}
 
 	/*
@@ -292,9 +307,25 @@ public class Exercises {
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse, Map<String, Integer> remoteWarehouse) {
 		
+	//	Map<String, Integer> inventory1 = new HashMap<String, Integer>();
 		
+	//	Map<String, Integer> inventory2 = new HashMap<String, Integer>();
 		
-		return null;
+		for(String sku : remoteWarehouse.keySet()) {
+			
+			if( mainWarehouse.containsKey(sku) ) {
+				
+				mainWarehouse.put(sku, mainWarehouse.get(sku) + remoteWarehouse.get(sku) );
+				
+			} else {
+				
+				mainWarehouse.put(sku, remoteWarehouse.get(sku) );
+			}
+			
+		}
+		
+		return mainWarehouse;	
+		
 	}
 
 	/*
