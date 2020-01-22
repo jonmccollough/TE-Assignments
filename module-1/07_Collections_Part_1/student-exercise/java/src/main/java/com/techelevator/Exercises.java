@@ -234,45 +234,64 @@ public class Exercises {
 
 		List <Integer> outputList = new ArrayList<Integer>();
 		
+		for(int i = 0; i < listOne.size() || i < listTwo.size() ; i++ ) {
+			
+			if( i < listOne.size()) {
+		
+				outputList.add(listOne.get(i));
+			
+			}
+			
+			if( i< listTwo.size()) {
+			
+				outputList.add(listTwo.get(i));
+			
+			}
+		
+		
+		}	return outputList;
+		
+		
 	//	int intListSizeOne = listOne.size();
 	//	int intListSizeTwo = listTwo.size();
 		
-		for( int i = 0; i < listOne.size(); i++ ) {
-			
-		if (listTwo.size() >= listTwo.size() ) {
-			
-			while( listTwo.size() > 0 ) {
-				
-				outputList.add(queueOne.poll());
-				outputList.add(queueTwo.poll());
-				return outputList;
-				
-			} while (listOne.size() > listTwo.size() ) {
-				
-				outputList.add(queueTwo.poll() );
-				return outputList;
-			}
-			
-		} //return outputList;
+//		for( int i = 0; i < listOne.size(); i++ ) {
+//			
+//		if (listOne.size() >= listTwo.size() ) {
+//			
+//			while( listTwo.size() > 0 ) {
+//				
+//				outputList.add(queueOne.poll());
+//				outputList.add(queueTwo.poll());
+//				
+//			//	return outputList;
+//				
+//			} while (listOne.size() > listTwo.size() ) {
+//				
+//				outputList.add(queueTwo.poll() );
+//			//	return outputList;
+//			}
+//			
+//		} //return outputList;
+//		
+//		if(listOne.size() < listTwo.size() ) {
+//			
+//			while( queueOne.size() > 0 ) {
+//				
+//				outputList.add(queueTwo.poll());
+//				outputList.add(queueOne.poll());
+//			//	return outputList;
+//				
+//			} while (queueTwo.size() > queueOne.size() ) {
+//				
+//				outputList.add( queueOne.poll() );
+//			//	return outputList;
+//				
+//			}
+//			
+//		} 
 		
-		if(listOne.size() <= listTwo.size() ) {
-			
-			while( queueOne.size() > 0 ) {
-				
-				outputList.add(queueTwo.poll());
-				outputList.add(queueOne.poll());
-				return outputList;
-				
-			} while (queueTwo.size() > queueOne.size() ) {
-				
-				outputList.add( queueOne.poll() );
-				return outputList;
-				
-			}
-			
-		} 
-		
-		} return outputList;
+//		} return outputList;
 		
 	}
 
@@ -286,6 +305,15 @@ public class Exercises {
 	 boardingGate( [0, -1, 44, 31, 17, 7, 27, 16, 26, 6] ) -> [7, 6, 17, 16, 27, 26]
 	 */
 	public List<Integer> boardingGate(List<Integer> seatNumberList) {
+		
+		Queue<Integer> oneTo10 = new LinkedList<Integer>();
+		Queue<Integer> elevenToTwenty = new LinkedList<Integer>();
+		Queue<Integer> twentyTwoToThirty = new LinkedList<Integer>();
+		
+		for ( int i = 0; i < seatNumberList.size(); i++ ) {
+			
+			
+		}
 		
 		return null;
 		
