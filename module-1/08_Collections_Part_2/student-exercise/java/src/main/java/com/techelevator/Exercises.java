@@ -179,7 +179,20 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		
+	//	String letter = words.substring(0,1);
+		
+		Map<String, String> firstLetters = new  HashMap<String, String>();
+		
+		for ( String letter : words) {
+			
+			firstLetters.put( letter.charAt(0) + "", letter.charAt(letter.length()-1 ) + "" );
+			
+		}
+		
+		
+		return firstLetters;
+		
 	}
 
 	/*
@@ -194,7 +207,26 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		
+		Map<String, Integer> countMap = new HashMap<String, Integer>();
+		
+		int counter = 0;
+		
+		for (String letter : words ) {
+			
+			if( countMap.containsKey(letter)) {
+				
+				counter = countMap.get(letter);
+				countMap.put(letter, counter + 1);
+				
+			} else { 
+				
+				countMap.put(letter, 1);
+			}
+			
+		}
+			
+		return countMap;
 	}
 
 	/*
@@ -209,7 +241,27 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
+		
+		Map<Integer, Integer> intMap = new HashMap<Integer, Integer>();
+		
+		int intCounter = 0;
+		
+		for( Integer num : ints) {
+			
+			if( intMap.containsKey(num)) {
+				
+				intCounter = intMap.get(num);
+				intMap.put(num, intCounter + 1);
+				
+		} else { 
+			
+			intMap.put(num, 1);
+			
+			}
+		
+		}		
+				
+		return intMap;
 	}
 
 	/*
@@ -222,6 +274,9 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
+		
+		
+		
 		return null;
 	}
 
@@ -236,6 +291,9 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse, Map<String, Integer> remoteWarehouse) {
+		
+		
+		
 		return null;
 	}
 
@@ -255,6 +313,9 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
+		
+		
+		
 		return null;
 	}
 
@@ -265,6 +326,9 @@ public class Exercises {
 	 distinctValues( ["jingle", "bells", "jingle", "bells", "jingle", "all", "the", "way"] ) -> ["jingle", "bells", "all", "the", "way"]
 	 */
 	public List<String> distinctValues(List<String> stringList) {
+		
+		
+		
 		return null;
 	}
 
