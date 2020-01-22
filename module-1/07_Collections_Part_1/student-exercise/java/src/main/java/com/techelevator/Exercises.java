@@ -229,9 +229,50 @@ public class Exercises {
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
 		
+		Queue<Integer> queueOne = new LinkedList<Integer>();
+		Queue<Integer> queueTwo = new LinkedList<Integer>();
+
+		List <Integer> outputList = new ArrayList<Integer>();
 		
+	//	int intListSizeOne = listOne.size();
+	//	int intListSizeTwo = listTwo.size();
 		
-		return null;
+		for( int i = 0; i < listOne.size(); i++ ) {
+			
+		if (listTwo.size() >= listTwo.size() ) {
+			
+			while( listTwo.size() > 0 ) {
+				
+				outputList.add(queueOne.poll());
+				outputList.add(queueTwo.poll());
+				return outputList;
+				
+			} while (listOne.size() > listTwo.size() ) {
+				
+				outputList.add(queueTwo.poll() );
+				return outputList;
+			}
+			
+		} //return outputList;
+		
+		if(listOne.size() <= listTwo.size() ) {
+			
+			while( queueOne.size() > 0 ) {
+				
+				outputList.add(queueTwo.poll());
+				outputList.add(queueOne.poll());
+				return outputList;
+				
+			} while (queueTwo.size() > queueOne.size() ) {
+				
+				outputList.add( queueOne.poll() );
+				return outputList;
+				
+			}
+			
+		} 
+		
+		} return outputList;
 		
 	}
 
