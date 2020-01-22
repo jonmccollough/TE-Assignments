@@ -190,7 +190,34 @@ public class Exercises {
 	 equals "1")
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+		
+		List<String> fizzStr = new ArrayList<String>();
+		
+		for (int i = 0; i < integerArray.length; i++ ) { 
+			
+			if( integerArray[i] % 3 == 0 && integerArray[i] % 5 == 0 ){
+				
+				fizzStr.add("FizzBuzz");
+			
+			} else if( integerArray[i] % 3 == 0) {
+				
+				fizzStr.add("Fizz");
+				
+			} else if (integerArray[i] % 5 == 0) {
+				
+				fizzStr.add("Buzz");
+				
+			} else {
+				
+				fizzStr.add(integerArray[i].toString());
+				
+			}
+			
+		
+		}
+			
+		return fizzStr;
+		
 	}
 
 	/*
@@ -201,7 +228,11 @@ public class Exercises {
 	 interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
+		
+		
+		
 		return null;
+		
 	}
 
 	/*
@@ -214,7 +245,9 @@ public class Exercises {
 	 boardingGate( [0, -1, 44, 31, 17, 7, 27, 16, 26, 6] ) -> [7, 6, 17, 16, 27, 26]
 	 */
 	public List<Integer> boardingGate(List<Integer> seatNumberList) {
+		
 		return null;
+		
 	}
 
 }
