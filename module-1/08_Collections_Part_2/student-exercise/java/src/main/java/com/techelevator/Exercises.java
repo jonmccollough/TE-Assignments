@@ -348,9 +348,7 @@ public class Exercises {
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
 		
-		
-		
-		return null;
+		return new HashMap<String, Integer>();
 	}
 
 	/*
