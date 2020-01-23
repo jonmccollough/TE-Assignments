@@ -8,4 +8,27 @@ public class Dog {
 		return this.isSleeping;
 	}
 	
+	public String makeSound() {
+		if ( isSleeping == false) {
+			
+			return "Woof!";
+			
+		} if (isSleeping == true) {
+			
+			return "Zzzzz...";
+			
+		} else {
+			
+			return null; }
+	}
+	
+	public void sleep() {
+		isSleeping = true;
+	}
+	
+	public void wakeUp() {
+		isSleeping = false;
+	}
+	
+	
 }
