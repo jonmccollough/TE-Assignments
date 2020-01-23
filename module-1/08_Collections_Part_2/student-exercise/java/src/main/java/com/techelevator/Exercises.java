@@ -1,6 +1,9 @@
 package com.techelevator;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -359,8 +362,21 @@ public class Exercises {
 	public List<String> distinctValues(List<String> stringList) {
 		
 		
+		List<String> listToReturn = new ArrayList<String>();
 		
-		return null;
-	}
+		Set<String> items = new LinkedHashSet<String>();
 
+		
+		for( String item : stringList) {
+			
+			items.add(item);
+			
+		}
+		
+		listToReturn.addAll(items);
+		
+		return listToReturn;
+		
+	}
+	
 }
