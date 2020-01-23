@@ -36,6 +36,8 @@ public class PaintCalc {
 				int height = Integer.parseInt(scan.nextLine());
 			//	newWall.setHeight(height);
 				
+				
+				
 				System.out.print("Enter wall width >>> "); 
 				int width = Integer.parseInt(scan.nextLine());
 			//	newWall.setWidth(Integer.parseInt(scan.nextLine()));
