@@ -30,14 +30,18 @@ public class Television {
 	//Methods
 	
 	public void turnOff() {
-		isOn = false;
+		if(isOn) { 
+			isOn = false;
+		}
 	}
 	
 	
 	public void turnOn() {
-			isOn = true;
+			if(!isOn) {
+				isOn = true;
 			currentChannel = 3;
 			currentVolume = 2;
+			}
 	}
 	
     public void changeChannel(int newChannel) {
