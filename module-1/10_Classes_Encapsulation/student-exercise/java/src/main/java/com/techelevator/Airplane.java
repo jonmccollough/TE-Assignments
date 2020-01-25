@@ -34,11 +34,13 @@ public class Airplane {
 	}
 	
 	public int getAvailableFirstClassSeats() {
-		return availableFirstClassSeats = totalFirstClassSeats - bookedFirstClassSeats;
+		availableFirstClassSeats = ( totalFirstClassSeats - bookedFirstClassSeats);
+		return availableFirstClassSeats;
 	}
 	
 	public int getAvailableCoachSeats() {
-		return availableCoachSeats = totalCoachSeats - bookedCoachSeats;
+		availableCoachSeats = ( totalCoachSeats - bookedCoachSeats);
+		return availableCoachSeats;
 	}
 
 	//Constructor
@@ -49,11 +51,11 @@ public class Airplane {
 	}
 	
 	//Methods
-	boolean reserveSeats(boolean forFirstClass, int totalNumberOfSeats) {
+	public boolean reserveSeats(boolean forFirstClass, int totalNumberOfSeats) {
 		
 		if (forFirstClass ){
 			
-				if (totalNumberOfSeats > availableFirstClassSeats) {
+				if (totalNumberOfSeats >= availableFirstClassSeats) {
 				
 					totalFirstClassSeats = totalFirstClassSeats - totalNumberOfSeats;
 					bookedFirstClassSeats = bookedFirstClassSeats + totalNumberOfSeats;
@@ -68,7 +70,7 @@ public class Airplane {
 			
 		else if (!forFirstClass){
 			
-		 	if (totalNumberOfSeats > availableCoachSeats) {
+		 	if (totalNumberOfSeats >= availableCoachSeats) {
 			
 		 			totalCoachSeats = totalCoachSeats - totalNumberOfSeats;
 		 			bookedCoachSeats = bookedCoachSeats + totalNumberOfSeats;
