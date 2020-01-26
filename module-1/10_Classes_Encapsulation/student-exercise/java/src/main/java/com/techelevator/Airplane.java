@@ -3,11 +3,8 @@ package com.techelevator;
 public class Airplane {
 	
 	//Data Members
-	
 	private String planeNumber;
 	private int bookedFirstClassSeats;
-	private int availableFirstClassSeats;
-	private int availableCoachSeats;
 	private int totalFirstClassSeats;
 	private int bookedCoachSeats;
 	private int totalCoachSeats;
@@ -34,13 +31,11 @@ public class Airplane {
 	}
 	
 	public int getAvailableFirstClassSeats() {
-		availableFirstClassSeats = ( totalFirstClassSeats - bookedFirstClassSeats);
-		return availableFirstClassSeats;
+		return totalFirstClassSeats - bookedFirstClassSeats;
 	}
 	
 	public int getAvailableCoachSeats() {
-		availableCoachSeats = ( totalCoachSeats - bookedCoachSeats);
-		return availableCoachSeats;
+		return totalCoachSeats - bookedCoachSeats;
 	}
 
 	//Constructor
@@ -53,41 +48,25 @@ public class Airplane {
 	//Methods
 	public boolean reserveSeats(boolean forFirstClass, int totalNumberOfSeats) {
 		
-		if (forFirstClass ){
-			
-				if (totalNumberOfSeats >= availableFirstClassSeats) {
-				
-					totalFirstClassSeats = totalFirstClassSeats - totalNumberOfSeats;
-					bookedFirstClassSeats = bookedFirstClassSeats + totalNumberOfSeats;
-					
-					return true;
-			
-				} 
-			
-			//else return false;
-			
-				}
-			
-		else if (!forFirstClass){
-			
-		 	if (totalNumberOfSeats >= availableCoachSeats) {
-			
-		 			totalCoachSeats = totalCoachSeats - totalNumberOfSeats;
-		 			bookedCoachSeats = bookedCoachSeats + totalNumberOfSeats;
-		 			return true;
-		 		}
-		 		
-		 		//else return false;
-		 		
+		if (forFirstClass ){			
+			if (totalNumberOfSeats <= totalFirstClassSeats - bookedFirstClassSeats) {
+				bookedFirstClassSeats = bookedFirstClassSeats + totalNumberOfSeats;
+				return true;
+			} 
+		} else if (!forFirstClass){
+		 	if (totalNumberOfSeats <= totalCoachSeats - bookedCoachSeats) {
+		 		bookedCoachSeats = bookedCoachSeats + totalNumberOfSeats;
+		 		return true;
 		 	}
-		return forFirstClass;
-		
-		
-		
+		 } return false;
+	
 	} 
-	
-	
-	
-	
-
 }
+
+
+
+
+
+
+
+

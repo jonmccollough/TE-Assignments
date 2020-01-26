@@ -10,11 +10,13 @@ public class Television {
 	
 	
 	public boolean isOn() {
-		return isOn = true;
+		return isOn == true;
 	}
+	
 	public int getCurrentChannel() {
 		return currentChannel;
 	}
+	
 	public int getCurrentVolume() {
 		return currentVolume;
 	}
@@ -37,40 +39,42 @@ public class Television {
 	
 	
 	public void turnOn() {
-			if(!isOn) {
-				isOn = true;
+		if(!isOn) {
+			isOn = true;
 			currentChannel = 3;
 			currentVolume = 2;
-			}
+		}
 	}
 	
     public void changeChannel(int newChannel) {
-    	if( currentChannel >= 3 && newChannel <= 18) {
-    		currentChannel = newChannel;
+    	if(isOn) {
+    		if( currentChannel >= 3 && newChannel <= 18) {
+    			currentChannel = newChannel;
+    		}
     	}
     }
     
     public void channelUp() {
     	if (isOn) {
-    	currentChannel = currentChannel +1;
+    		currentChannel = currentChannel +1;
     	if(currentChannel > 18) {
     		currentChannel = 3;
-    	}
-    	} ;
+    		}
+    	} 
     }
     
     public void channelDown() {
     	if (isOn) {
-    	currentChannel = currentChannel - 1;
+    		currentChannel = currentChannel - 1;
     	if(currentChannel < 3) {
     		currentChannel = 18;
-    	}
+    		}
     	}
     }
     
     public void raiseVolume() {
     	if (isOn) {
-    	currentVolume = currentVolume + 1;
+    		currentVolume = currentVolume + 1;
     	if(currentVolume > 10) {
     		currentVolume = 10;}
     	}
@@ -78,7 +82,7 @@ public class Television {
     
     public void lowerVolume() {
     	if(isOn) {
-    	currentVolume = currentVolume - 1;
+    		currentVolume = currentVolume - 1;
     	if(currentVolume < 0) {
     		currentVolume = 0;}
     	}
@@ -86,3 +90,7 @@ public class Television {
 	
     
 }
+
+
+
+

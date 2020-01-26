@@ -10,36 +10,47 @@ public class Elevator {
 	public int getCurrentFloor() {
 		return currentFloor;
 	}
+	
 	public int getNumberOfFloors() {
 		return numberOfFloors;
 	}
+	
 	public boolean isDoorOpen() {
 		return doorOpen;
 	}
 	
 	//Constructor
 	public Elevator(int totalNumberOfFloors) {
-		totalNumberOfFloors = numberOfFloors;
+		currentFloor = 1;
+		numberOfFloors = totalNumberOfFloors;
+		doorOpen = false;
 	}
 	
 	//Methods
 	
-	void openDoor() {
+	public void openDoor() {
 		doorOpen = true;
 	}
 	
-	void closeDoor() {
+	public void closeDoor() {
 		doorOpen = false;
 	}
 	
-	void goUp(int desiredFloor) {
-		if(doorOpen = false) {
-			currentFloor = currentFloor + desiredFloor;
+	public void goUp(int desiredFloor) {
+		if(doorOpen == false) {
+			if(desiredFloor <= numberOfFloors && desiredFloor > currentFloor) {
+			currentFloor = desiredFloor;
+			}
 		}
 	}
 	
-	void goDown(int desiredFloor) {
-		currentFloor = currentFloor - desiredFloor;
+	public void goDown(int desiredFloor) {
+		if(doorOpen == false) {
+			if(desiredFloor > 0 && desiredFloor < currentFloor) {
+				currentFloor = desiredFloor;
+			}
+		}
+		
 	}
 	
 	
