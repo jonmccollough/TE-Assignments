@@ -18,8 +18,8 @@ public class Bid {
 		return bidAmount;
 	}
 	
-	@Override
-	public String toString();
-		return "Bid: " + bidder + " " + bidAmount;
-	
+//	@Override
+//	public String toString();
+//		return "Bid: " + bidder + " " + bidAmount;
+//	
 }
