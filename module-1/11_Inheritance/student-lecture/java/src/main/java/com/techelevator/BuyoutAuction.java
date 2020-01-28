@@ -30,6 +30,7 @@ public class BuyoutAuction extends Auction {
 		if (getHighBid().getBidAmount() < buyoutPrice) {
 			if (offeredBid.getBidAmount() >= buyoutPrice) {
 				offeredBid = new Bid(offeredBid.getBidder(), buyoutPrice);
+		//		this.closeAuction();
 			}
 			isCurrentWinningBid = super.placeBid(offeredBid);
 		}
