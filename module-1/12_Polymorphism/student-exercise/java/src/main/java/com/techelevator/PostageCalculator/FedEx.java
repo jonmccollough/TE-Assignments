@@ -16,7 +16,7 @@ public class FedEx implements DeliveryDriver {
 
 	@Override
 	public String name() {
-		return "FedEx";
+		return "FedEx \t\t\t";
 	}
 
 }

@@ -37,6 +37,34 @@ public class OldMacdonald {
 		
 		Flyable sampleFlyableIndividual = new Cow();
 		Cow sampleCow = new Cow();
-		sampleCow.
+		
+		Cat penelope = new Cat ("Penelope", "meow");
+		penelope.sleep();
+		
+		farmAnimals = new FarmAnimal[] { new Cow(), new Chicken(), penelope };
+
+		for (FarmAnimal animal : farmAnimals) {
+			
+			String name = animal.getName();
+			String sound = animal.getSound();
+			System.out.println("Old MacDonald had a farm, ee, ay, ee, ay, oh!");
+			System.out.println("And on his farm he had a " + name + ", ee, ay, ee, ay, oh!");
+			System.out.println("With a " + sound + " " + sound + " here");
+			System.out.println("And a " + sound + " " + sound + " there");
+			System.out.println("Here a " + sound + " there a " + sound + " everywhere a " + sound + " " + sound);
+			System.out.println();
+		}
+		
+		for (FarmAnimal animal : farmAnimals) {
+			
+			String satietedComment = animal.eat(100);
+			System.out.println("Old MacDonald had a farm e i e i o" + satietedComment);
+		}
+		
 	}
 }
+
+
+
+
+

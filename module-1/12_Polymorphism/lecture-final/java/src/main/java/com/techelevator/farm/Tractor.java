@@ -1,6 +1,6 @@
 package com.techelevator.farm;
 
-public class Tractor implements Singable, Flyable {
+public abstract class Tractor implements Singable, Flyable {
 	
 	private String name = "Platipi Tractor";
 	private String sound = "uh.... what?";
@@ -9,9 +9,9 @@ public class Tractor implements Singable, Flyable {
 		return "You should get out the way!";
 	}
 	
-	public String getName() {
-		return name;
-	}
+//	public String getName() {
+//		return name;
+//	}
 	
 	public boolean tuneSinger() {
 		return false;

@@ -6,13 +6,13 @@ public class SPU4DayGround implements DeliveryDriver {
 	
 	@Override
 	public double calculateRate(int distance, double weight) {
-		rate = (weight * 0.0050) * distance;
+		rate = ( (weight / 2) * 0.0050) * distance;
 		return rate;
 	}
 
 	@Override
 	public String name() {
-		return "SPU (4-Day Ground)";
+		return "SPU (4-Day Ground)\t";
 	}
 
 }

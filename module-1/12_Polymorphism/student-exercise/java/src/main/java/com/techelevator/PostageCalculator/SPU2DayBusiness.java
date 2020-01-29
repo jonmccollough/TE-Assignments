@@ -6,12 +6,12 @@ public class SPU2DayBusiness implements DeliveryDriver {
 	
 	@Override
 	public double calculateRate(int distance, double weight) {
-		rate = (weight * 0.0500) * distance;
+		rate = ( (weight / 16) * 0.0500) * distance;
 		return rate;
 	}
 
 	@Override
 	public String name() {
-		return "SPU (2-Day Business)";
+		return "SPU (2-Day Business)\t";
 	}
 }
