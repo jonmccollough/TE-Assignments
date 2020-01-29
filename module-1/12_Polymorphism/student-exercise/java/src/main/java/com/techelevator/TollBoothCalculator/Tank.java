@@ -8,13 +8,13 @@ public class Tank implements VehicleInterface {
 	
 	@Override
 	public double calculateToll(int distance) {
-		
+		distance = distance *0;
 		return toll;
 	}
 
 	@Override
 	public String getType() {
-		return Tank;
+		return "Tank             ";
 	}
 	
 }
