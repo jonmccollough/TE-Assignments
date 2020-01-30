@@ -19,17 +19,6 @@ public class TollCalculator {
 		listOfVehicles.add(new Truck(6) );
 		listOfVehicles.add(new Truck(8) );
 		
-//		VehicleInterface[] Highway = new VehicleInterface[3];
-//		Highway[0] = new Truck(2);
-//		Highway[1] = new Car(true); 
-//		Highway[2] = new Tank();
-	
-//		for ( VehicleInterface distanceToll : listOfVehicles ) {
-//			System.out.println(distanceToll.getType() + "                   " + 
-//			
-//			"$" + distanceToll.calculateToll(120) );
-//		}
-		
 		for ( VehicleInterface highway : listOfVehicles ) {
 			
 			int random = (int) (Math.random() * 240 + 10 ) - 10 ;
