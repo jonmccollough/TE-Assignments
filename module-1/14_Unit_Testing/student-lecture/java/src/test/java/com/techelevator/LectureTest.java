@@ -18,6 +18,7 @@ import org.junit.runners.MethodSorters;
  * for the production class "Foo" would be "FooTest"
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
 public class LectureTest {
 
 	/* If a method is annotated with @Before, it will be executed immediately prior to every test.
@@ -66,7 +67,7 @@ public class LectureTest {
 
 		String theString = "Java"; // Arrange
 		int length = theString.length(); // Act
-		Assert.assertEquals(4, length); // Assert
+		Assert.assertEquals("length not as expected", 6, length); // Assert
 	}
 
 	@Test

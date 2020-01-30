@@ -17,6 +17,10 @@ public final class Cat extends FarmAnimal {
 		return "thanks, I'll wake you up at 4:30 AM for more food.";
 
 	}
+
+	public boolean letOwnerSleep() {
+		return letOwnerSleep;
+	}
 	
 	
 
