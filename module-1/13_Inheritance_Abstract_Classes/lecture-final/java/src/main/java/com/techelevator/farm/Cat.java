@@ -22,6 +22,8 @@ public final class Cat extends FarmAnimal {
 		return letOwnerSleep;
 	}
 	
-	
+	public boolean letOwnerSleep() {
+		return letOwnerSleep;
+	}
 
 }
