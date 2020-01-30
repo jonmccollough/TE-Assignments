@@ -18,6 +18,8 @@ public final class Cat extends FarmAnimal {
 
 	}
 	
-	
+	public boolean letOwnerSleep() {
+		return letOwnerSleep;
+	}
 
 }

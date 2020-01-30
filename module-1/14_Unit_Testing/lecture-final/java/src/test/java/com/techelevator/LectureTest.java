@@ -18,9 +18,6 @@ import org.junit.runners.MethodSorters;
  * for the production class "Foo" would be "FooTest"
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-
-
-
 public class LectureTest {
 
 	/* If a method is annotated with @Before, it will be executed immediately prior to every test.
@@ -69,17 +66,17 @@ public class LectureTest {
 
 		String theString = "Java"; // Arrange
 		int length = theString.length(); // Act
-		Assert.assertEquals("lengths not as expected", 6, length); // Assert
+		Assert.assertEquals(4, length); // Assert
 	}
 
 	@Test
 	public void startsWith_returns_true_if_a_string_starts_with_the_specified_characters() {
 		System.out.println("startsWith_returns_true_if_a_string_starts_with_the_specified_characters"); // FOR DEMONSTRATION PURPOSES ONLY, don't do this in your own tests
 
-		/* The assertTrue method validates that the boolean value provided as an argument
+		/* The assertTrue method validates that the boolean value provided as an arugment
 		 * is true and fails the test if it is false. */
 
-		String theString = "NotHello World!"; // Arrange
+		String theString = "Hello World!"; // Arrange
 		boolean startsWithHello = theString.startsWith("Hello"); // Act
 
 		/* every assert method allows the first parameter to be a String that contains a message
@@ -100,9 +97,7 @@ public class LectureTest {
 		Assert.fail("This is how I can force a test to fail");
 	}
 
-	
 	public void this_method_is_not_a_test_because_it_does_not_have_the_Test_annotation() {
 		// This method will not be run by Junit, because it's not a test
-		System.out.println("This test is missing its annotation"); // FOR DEMONSTRATION PURPOSES ONLY, don't do this in your own tests
 	}
 }

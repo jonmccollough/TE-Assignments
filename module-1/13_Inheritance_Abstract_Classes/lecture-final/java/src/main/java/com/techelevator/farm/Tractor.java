@@ -1,6 +1,6 @@
 package com.techelevator.farm;
 
-public abstract class Tractor implements Singable, Flyable {
+public class Tractor implements Singable, Flyable {
 	
 	private String name = "Platipi Tractor";
 	private String sound = "uh.... what?";
