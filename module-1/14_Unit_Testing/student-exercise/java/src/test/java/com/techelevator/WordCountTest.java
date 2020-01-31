@@ -12,7 +12,6 @@ public class WordCountTest {
 	public void wordcount_black_sheep() {
 		WordCount myTest = new WordCount();
 		String[] words = {"ba", "ba", "black", "sheep"};
-	//	String[] ans = {"ba= 2", "black= 1", "sheep=1"};
 		Map<String,Integer> ans  = new HashMap<String, Integer>() 
 		{{ 
 			put("ba" , 2); 
@@ -20,7 +19,6 @@ public class WordCountTest {
 			put("sheep", 1);
 		}};
 		Map<String, Integer> count = myTest.getCount(words);
-		
 		Assert.assertEquals( ans, count);
 	}
 	
@@ -35,7 +33,6 @@ public class WordCountTest {
 			put("a", 2);
 		} };
 		Map<String, Integer> count = myTest.getCount(words);
-		
 		Assert.assertEquals( ans, count);
 	}
 	
@@ -46,7 +43,6 @@ public class WordCountTest {
 		{{ 
 		}};
 		Map<String, Integer> count = myTest.getCount(null);
-		
 		Assert.assertEquals( ans, count);
 	}
 }
