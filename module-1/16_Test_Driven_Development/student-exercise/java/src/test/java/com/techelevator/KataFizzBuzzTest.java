@@ -36,4 +36,17 @@ public class KataFizzBuzzTest {
 		Assert.assertEquals("FizzBuzz", tester.fizzBuzz(check));
 		
 	}
+	
+	@Test
+public void div_not_by_both_3_or_5_return_string() {
+		
+		int check = 7;
+		
+		Assert.assertEquals("7", tester.fizzBuzz(check));
+		
+	}	
 }
+
+	
+	
+	
