@@ -38,11 +38,20 @@ public class KataFizzBuzzTest {
 	}
 	
 	@Test
-public void div_not_by_both_3_or_5_return_string() {
+	public void div_not_by_both_3_or_5_return_string() {
 		
 		int check = 7;
 		
 		Assert.assertEquals("7", tester.fizzBuzz(check));
+		
+	}	
+	
+	@Test
+	public void div_not_by_both_3_or_5_out_of_1_to_100_return_empty() {
+		
+		int check = 0;
+		
+		Assert.assertEquals("", tester.fizzBuzz(check));
 		
 	}	
 }
