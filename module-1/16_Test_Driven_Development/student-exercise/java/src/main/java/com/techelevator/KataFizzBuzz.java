@@ -18,8 +18,12 @@ public class KataFizzBuzz {
 		} else if (check % 5 == 0 ) {
 			
 			fizzStr = "Buzz";
-		}
+		} else if (check >= 1 && check <= 100 ) {
 		
+			fizzStr = Integer.toString(check);
+			
+		}	
+			
 		return fizzStr;
 
 	}
