@@ -1,13 +1,19 @@
 package com.techelevator;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 public class KataFizzBuzz {
 
 	
 	public String fizzBuzz(int check) {
-		return null;
+		
+		String fizzStr = "";
+		
+		if(check % 3 == 0) {
+			
+			fizzStr = "fizz";
+			
+		}
+		
+		return fizzStr;
 
 	}
 	
