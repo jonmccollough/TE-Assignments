@@ -22,9 +22,18 @@ public class KataFizzBuzzTest {
 	@Test
 	public void div_by_5_convert_to_buzz() {
 		
-		int check = 10;
+		int check = 5;
 		
 		Assert.assertEquals( "Buzz",  tester.fizzBuzz(check) );
+		
+	}
+	
+	@Test
+	public void div_by_both_3_and_5_convert_to_FuzzBizz() {
+		
+		int check = 15;
+		
+		Assert.assertEquals("FizzBuzz", tester.fizzBuzz(check));
 		
 	}
 }
