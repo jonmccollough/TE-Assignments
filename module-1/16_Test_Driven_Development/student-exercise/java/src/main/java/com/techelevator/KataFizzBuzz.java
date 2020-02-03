@@ -9,8 +9,11 @@ public class KataFizzBuzz {
 		
 		if(check % 3 == 0) {
 			
-			fizzStr = "fizz";
+			fizzStr = "Fizz";
 			
+		} if (check % 5 == 0 ) {
+			
+			fizzStr = "Buzz";
 		}
 		
 		return fizzStr;

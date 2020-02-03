@@ -15,9 +15,16 @@ public class KataFizzBuzzTest {
 		
 		int check = 3;
 		
-		Assert.assertEquals( "fizz",  tester.fizzBuzz(check) );
+		Assert.assertEquals( "Fizz",  tester.fizzBuzz(check) );
 		
 	}
 
-	
+	@Test
+	public void div_by_5_convert_to_buzz() {
+		
+		int check = 10;
+		
+		Assert.assertEquals( "Buzz",  tester.fizzBuzz(check) );
+		
+	}
 }
