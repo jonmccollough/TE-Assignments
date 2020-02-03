@@ -7,6 +7,8 @@ public class KataFizzBuzz {
 		
 		String fizzStr = "";
 		
+		String testString = Integer.toString(check);
+		
 		if (check % 3 == 0 && check % 5 == 0 && check >= 1 && check <= 100 ){
 			
 			fizzStr = "FizzBuzz";
@@ -18,11 +20,16 @@ public class KataFizzBuzz {
 		} else if (check % 5 == 0 && check >= 1 && check <= 100 ) {
 			
 			fizzStr = "Buzz";
+			
+		} else if ( testString.contains("3") ) {
+			
+			fizzStr = "Fizz";
+			
 		} else if (check >= 1 && check <= 100 ) {
 		
 			fizzStr = Integer.toString(check);
-			
-		}	
+	
+		}
 			
 		return fizzStr;
 
