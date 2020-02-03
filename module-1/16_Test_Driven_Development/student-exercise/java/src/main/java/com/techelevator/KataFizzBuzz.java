@@ -7,11 +7,15 @@ public class KataFizzBuzz {
 		
 		String fizzStr = "";
 		
-		if(check % 3 == 0) {
+		if (check % 3 == 0 && check % 5 == 0) {
+			
+			fizzStr = "FizzBuzz";
+			
+		} else if (check % 3 == 0) {
 			
 			fizzStr = "Fizz";
 			
-		} if (check % 5 == 0 ) {
+		} else if (check % 5 == 0 ) {
 			
 			fizzStr = "Buzz";
 		}
