@@ -9,25 +9,18 @@ public class KataFizzBuzz {
 		
 		String testString = Integer.toString(check);
 		
-		if (check % 3 == 0 && check % 5 == 0 && check >= 1 && check <= 100 ){
+		if ( testString.contains("3") && testString.contains("5") || check % 3 == 0 && check % 5 == 0 && check >= 1 && check <= 100 ){
 			
 			fizzStr = "FizzBuzz";
-			
-		} else if (check % 3 == 0 && check >= 1 && check <= 100 ) {
-			
-			fizzStr = "Fizz";
+
 			
 		} else if (( check % 5 == 0 && check >= 1 && check <= 100 ) || testString.contains("5")) {
 			
 			fizzStr = "Buzz";
 			
-		} else if ( testString.contains("3") ) {
-			
+		} else if (testString.contains("3") || check % 3 == 0 && check >= 1 && check <= 100 ) {
+				
 			fizzStr = "Fizz";
-			
-//		} else if ( testString.contains("5") ) {
-//			
-//			fizzStr = "Buzz";
 			
 		} else if (check >= 1 && check <= 100 ) {
 		
@@ -38,5 +31,4 @@ public class KataFizzBuzz {
 		return fizzStr;
 
 	}
-	
 }
