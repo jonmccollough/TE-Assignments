@@ -17,13 +17,17 @@ public class KataFizzBuzz {
 			
 			fizzStr = "Fizz";
 			
-		} else if (check % 5 == 0 && check >= 1 && check <= 100 ) {
+		} else if (( check % 5 == 0 && check >= 1 && check <= 100 ) || testString.contains("5")) {
 			
 			fizzStr = "Buzz";
 			
 		} else if ( testString.contains("3") ) {
 			
 			fizzStr = "Fizz";
+			
+//		} else if ( testString.contains("5") ) {
+//			
+//			fizzStr = "Buzz";
 			
 		} else if (check >= 1 && check <= 100 ) {
 		

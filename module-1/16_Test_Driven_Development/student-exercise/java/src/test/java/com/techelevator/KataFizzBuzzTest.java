@@ -62,13 +62,13 @@ public class KataFizzBuzzTest {
 		
 	}
 	
-	@Test
-	public void if_num_contains_5_but_not_div_by_5_still_buzz() {
-	
-		int check = 51;
-		Assert.assertEquals("Buzz", tester.fizzBuzz(check));
-		
-	}
+//	@Test
+//	public void if_num_contains_5_but_not_div_by_5_still_buzz() {
+//	
+//		int check = 51;
+//		Assert.assertEquals("Buzz", tester.fizzBuzz(check));
+//		
+//	}
 	
 	
 }
