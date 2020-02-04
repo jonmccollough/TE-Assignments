@@ -16,27 +16,58 @@ public class WordSearch {
 		System.out.println(("Please enter word to search for: "));
 		String userWord = userInput2.nextLine();
 
+		Scanner userInput3 = new Scanner(System.in);
+		System.out.println(("Should the search be case sensitive? (Y\\N)"));
+		String userCase = userInput3.nextLine();
+
 		int counter = 0;
-		
-		try (Scanner fileScanner = new Scanner(inputFile)) {
 
-			while (fileScanner.hasNextLine()) {
-				
-				counter++;
-				
-				String line = fileScanner.nextLine();
+		if (userCase.equalsIgnoreCase("Y")) {
 
-				if ( line.contains(userWord) ) {
+			try (Scanner fileScanner = new Scanner(inputFile)) {
 
-					System.out.println(counter + ") " + line);
+				while (fileScanner.hasNextLine()) {
+
+					counter++;
+
+					String line = fileScanner.nextLine();
+
+					if (line.contains(userWord)) {
+
+						System.out.println(counter + ") " + line);
+
+					}
 
 				}
 
-			} 
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+		} else if (userCase.equalsIgnoreCase("N")) {
+
+			try (Scanner fileScanner = new Scanner(inputFile)) {
+
+				while (fileScanner.hasNextLine()) {
+
+					counter++;
+
+					String line = fileScanner.nextLine();
+
+					if (line.toLowerCase().contains(userWord.toLowerCase())) {
+
+						System.out.println(counter + ") " + line);
+
+					}
+
+				}
+
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+
 		}
+
 	}
 
 	@SuppressWarnings("resource")
@@ -53,7 +84,7 @@ public class WordSearch {
 			System.out.println(path + " is not a file");
 			System.exit(1); // Ends the program
 		}
-		
+
 		return inputFile;
 
 	}
