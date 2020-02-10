@@ -1,4 +1,5 @@
 -- The name and population of all cities in the USA with a population of greater than 1 million people
+SELECT name, population FROM city WHERE population >1000000;
 
 -- The name and population of all cities in China with a population of greater than 1 million people
 
