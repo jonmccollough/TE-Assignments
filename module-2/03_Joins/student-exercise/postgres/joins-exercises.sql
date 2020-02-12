@@ -2,6 +2,8 @@
 
 -- 1. All of the films that Nick Stallone has appeared in
 -- (30 rows)
+SELECT first_name, last_name, film_name
+FROM actor 
 
 -- 2. All of the films that Rita Reynolds has appeared in
 -- (20 rows)
