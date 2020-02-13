@@ -125,7 +125,16 @@ public class Exercises {
 	 biggerTwo([1, 1], [1, 2]) → [1, 2]
 	 */
 	public int[] biggerTwo(int[] a, int[] b) {
-		return new int[] {};
+		int counterA = 0;
+		int counterB = 0;
+		
+		counterA = a[0] + a[1];
+		counterB = b[0] + b[1];
+		if( counterA > counterB || counterA == counterB) {
+			return a;
+		} else { 
+			return b;
+		}
 	}
 
 	/*
