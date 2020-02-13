@@ -130,10 +130,10 @@ public class Exercises {
 		
 		counterA = a[0] + a[1];
 		counterB = b[0] + b[1];
-		if( counterA > counterB || counterA == counterB) {
-			return a;
-		} else { 
+		if( counterB > counterA ) {
 			return b;
+		} else { 
+			return a;
 		}
 	}
 
