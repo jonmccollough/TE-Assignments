@@ -82,10 +82,14 @@ WHERE category_id IN (SELECT category_id FROM category WHERE name = 'Mathmagical
 -- 11. Retry deleting Mathmagical from the category table, followed by retrying
 -- to delete "Euclidean PI".
 -- (Did either deletes succeed? Why?)
--- <It did succeed this time. The foreign keys  were removed so it was able to be deleted>
+-- <It did succeed deleting Mathmagical this time. The foreign keys  were removed so it was able to be deleted
+ -- It did not succeed deleting EUCLIDEAN PI. It is still a foriegn key restraint.>
 
 DELETE FROM category
 WHERE name IN (SELECT name FROM category WHERE name = 'Mathmagical');
+
+DELETE FROM film
+WHERE film_id IN (SELECT film_id FROM film WHERE title = 'EUCLIDEAN PI');
 
 -- 12. Check database metadata to determine all constraints of the film id, and
 -- describe any remaining adjustments needed before the film "Euclidean PI" can

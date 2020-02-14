@@ -40,7 +40,16 @@ public class Exercises {
 	 noTriples([1, 1, 1, 2, 2, 2, 1]) → false
 	 */
 	public boolean noTriples(int[] nums) {
-		return false;
+		if (nums != null) {
+			for(int i =0; i< nums.length-2; i++) {
+				if(nums.length >= 3 && nums[i] == nums[i+1] && nums[i+1] == nums[i+2]) {
+					return false;
+				} else if (nums.length < 3) {
+					return true;
+				}
+			}
+		}
+		return true;
 	}
 
 	/*
