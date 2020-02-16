@@ -95,4 +95,4 @@ Questions you should ask yourself.
 [crow-foot-notation]: https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model#Crow's_foot_notation
 [database-normalization]: https://www.studytonight.com/dbms/database-normalization.php
 [how-to-select-the-right-data-type]: https://chartio.com/learn/amazon-redshift/how-to-select-the-right-data-types/
-[natural-or-surrogate-keys]: http://www.agiledata.org/essays/keys.html
+[natural-or-surrogate-keys]: http://www.agiledata.org/essays/keys.html![](![](![](![]())))
