@@ -10,16 +10,11 @@ import com.techelevator.city.CityDAO;
 import com.techelevator.city.JDBCCityDAO;
 
 public class CityFun {
-	BasicDataSource worldDataSource;
 	CityDAO dao;
 	
-	public CityFun() {
-		worldDataSource = new BasicDataSource();
-		worldDataSource.setUrl("jdbc:postgresql://localhost:5432/world");
-		worldDataSource.setUsername("postgres");
-		worldDataSource.setPassword("postgres1");
+	public CityFun(CityDAO dao) {
 		
-		dao = new JDBCCityDAO(worldDataSource);
+		this.dao = dao;
 	}
 
 	public void saveCity(City city) {
