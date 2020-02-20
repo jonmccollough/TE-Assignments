@@ -175,7 +175,20 @@ public class Exercises {
 	 * more14([1, 1]) → true
 	 */
 	public boolean more14(int[] nums) {
-		return false;
+		if(nums != null) {
+			int oneCount = 0;
+			int fourCount =0;
+			for (int i = 0; i < nums.length; i++) {
+				 if(nums[i] == 1) {
+					 oneCount++;
+				 }
+				 if(nums[i] == 4) {
+					 fourCount++;
+				 } if ( oneCount > fourCount) {
+					 return true;
+				 } else return false;
+			}
+		} return false;
 	}
 
 	/*
