@@ -27,6 +27,8 @@
   main img{
     display: block;
     max-width: 100%;
+    margin-bottom: 15px;
+    z-index: -10;
   }
 
   header img{
@@ -37,39 +39,81 @@ aside ul {
   padding-top: 200px;
   width: 100px;
   font-style: #00adee;
-  text-transform: capitalize;
   text-align: center;
   letter-spacing: 2px;
   margin-right: 50px;
+}
+
+aside ul li{
+  text-decoration: none;
+  width: 130px;
+  list-style: none;
+  line-height: 45px;
+  justify-content: center;
+  border-bottom-style: solid;
+  border-bottom-width: .5px;
+  border-bottom-color: #00adee;
+}
+
+a:link{
+  text-decoration: none;
+  justify-content: center;
+  color: #00adee;
+  text-transform: uppercase; 
 }
 
   aside img{
   position: fixed;
   width: 200px;
   display: block;
-
 }
 
-h2 style{
-color: #8cc36f;
+h2 {
+  font-style: #8cc36f;
+  color: #8cc36f;
+  font-size: 100%;
+  letter-spacing: 1px;
+}
+
+i{
+  margin-right: 5px;
+}
+
+p{
+  max-width: 90%;
+  font-size: 90%;
+}
+div#our-work{
+  border-right-style: solid;
+  border-right-width: .5px;
+  border-right-color: #8cc36f
+}
+
+div#what-we-do{
+  border-right-style: solid;
+  border-right-width: .5px;
+  border-right-color: #8cc36f
 }
 
 aside {
   width: 200px;
-  display: block;
+  display: inline-block;
   height: 100%;
-  margin: auto;
+  margin-right: auto;
   position: fixed;
   padding-right: 210px;
   border-right-style: solid;
   border-right-color: #00adee;
-  border-right-width: 3px;
-
+  border-right-width: 1px;
+  justify-content: space-between;
 }
 
 section div{
  display: inline-block;
  max-width: 30%;
+ letter-spacing: .5px;
+ padding: 10px;
+ margin-left: 10px;
 }
 
  body{
@@ -77,5 +121,10 @@ section div{
  }
 
  footer{
+   max-width: 80%;
    font-size: 85%;
+ }
+
+ p.subheading{
+   display: none;
  }
