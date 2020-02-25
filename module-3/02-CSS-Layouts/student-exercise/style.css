@@ -12,3 +12,83 @@ html {
     font-size: 16px;
 }
 
+img#te-logo{
+    width: 370px;
+    padding-left: 70px;
+}
+
+    h1.headline{
+        max-width: 100%;
+        min-width: 10px;
+        padding-left: 70px;
+        color: var(--grey);
+    }
+
+    h1{
+        font-size: 70px;
+    }
+
+    div#student-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "quote quote pic"
+        "profile profile contact"
+        "exp exp exp ";
+        padding-left: 70px;
+        padding-right: 70px;
+        column-gap: 20px;
+        color: var(--grey);
+    }
+
+    div#student-quote{
+        grid-area: quote;
+        color: var(--grey);
+        line-height: 40px;
+    }
+
+    div#student-picture img{
+        grid-area: pic;
+        display: flex;
+        border-radius: 100%;
+        align-content: center;
+    }
+
+    div#student-profile {
+        grid-area: profile;
+    }
+
+    div#student-contact {
+        grid-area: contact;      
+        text-align: center
+    }
+
+    #experience{
+        grid-area: exp;
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    section div{
+        margin-left: 100px;
+    }
+
+    footer{
+        grid-area: footer;
+        padding-left: 70px;
+        color: var(--grey);
+    }
+
+h3{
+    color: #00adee;
+}
+
+    #experience div p{
+        width: 300px;
+    }
+
+    body{
+        Background: rgba(192, 192, 192, 0.1);
+    }

@@ -14,4 +14,4 @@ Here are some design decisions to be aware of:
 * Here are the following color styles:
     - Blue: #00ADEE;
     - Grey: #505355
-    - Background Color: rgba(192, 192, 192, 0.1);
+	- Background Color: rgba(192, 192, 192, 0.1);
