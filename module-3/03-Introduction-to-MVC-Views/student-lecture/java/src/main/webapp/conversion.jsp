@@ -108,7 +108,7 @@ library --%>
 				<th>celcius</th>
 			</tr>
 			 
-			<c:forEach begin="0" end="250" step="5" var="tempF">
+			<c:forEach begin="0" end="250" var="tempF">
 				<%-- The "choose" tag below allows us to do "if/else"
 				logic. Each of the "when" tags is evaluated in order, 
 				if the "test" attribute is true, then the body of the 
