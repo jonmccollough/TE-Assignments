@@ -26,6 +26,8 @@ img#te-logo{
 
     h1{
         font-size: 70px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     div#student-grid{
@@ -45,6 +47,9 @@ img#te-logo{
         grid-area: quote;
         color: var(--grey);
         line-height: 40px;
+        padding-top: 30px;
+        letter-spacing: 1.3px;
+        
     }
 
     div#student-picture img{
@@ -56,11 +61,13 @@ img#te-logo{
 
     div#student-profile {
         grid-area: profile;
+        text-size-adjust: 50%;
     }
 
     div#student-contact {
         grid-area: contact;      
-        text-align: center
+        text-align: center;
+        font-style: italic;
     }
 
     #experience{
@@ -79,6 +86,10 @@ img#te-logo{
         grid-area: footer;
         padding-left: 70px;
         color: var(--grey);
+    }
+
+    footer p{
+        font-size: 15px;
     }
 
 h3{
