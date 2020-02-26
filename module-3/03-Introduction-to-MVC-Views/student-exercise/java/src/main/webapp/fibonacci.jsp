@@ -34,5 +34,25 @@
 <%--
 	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
  --%>
+ 
+ 
+ <ul>
+ 
+  
+<c:set var= "one" value = "0" scope= "page" />
+<c:set var= "two" value = "1" scope= "page" />
+
+<c:forEach var="three" begin="1" end="${param.max}" >
+
+<c:if test= "${three == one + two}"> 
+	<li> ${three} </li>
+	
+	<c:set var= "one" value="${two}"/>
+	<c:set var= "two" value = "${three}"/>
+	
+</c:if>	
+
+</c:forEach>
+</ul> 
 
 <c:import url="common/footer.jsp"></c:import>
