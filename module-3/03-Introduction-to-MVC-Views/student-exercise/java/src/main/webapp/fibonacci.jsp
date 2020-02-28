@@ -31,11 +31,6 @@
 	</ul>
 </nav>
 
-<%--
-	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
- --%>
- 
- 
  <ul>
  
   
