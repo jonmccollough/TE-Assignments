@@ -25,6 +25,11 @@
 			the solar system!</p>
 		<ul>
 			<li><a href="#">How much would you weigh on Jupiter?</a></li>
+			
+			<c:url var="productDetailUrl" value= "/product/detail">
+				<c:param name="id" value="${product.id }"/>
+			</c:url>
+			
 			<li><a href="#">How long would it take to drive to Neptune?</a></li>
 			<li><a href="#">How old are you in Mercury years?</a></li>
 		</ul>
