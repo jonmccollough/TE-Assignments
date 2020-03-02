@@ -18,20 +18,27 @@
 		<c:forEach var="product" items="${products}">
 
 			<!-- Standard Product -->
-			<div class="tile ${product.remainingStock <= 0 ? 'sold-out' : ''}">
+			<%-- <div class="tile ${product.remainingStock <= 0 ? 'sold-out' : ''}"> --%>
 				<c:choose>
 					<c:when test="${product.remainingStock <= 0}">
-						<span class="banner">Sold Out</span>
+					<c:set var="classVar" value="tile sold-out"></c:set>
 					</c:when>
 
 					<c:when test="${product.topSeller}">
-						<span class="banner top-seller">Top Seller!</span>
+						<c:set var="classVar" value="tile top-seller"></c:set>
 					</c:when>
+					<c:otherwise>
+					<c:set var="classVar" value="tile"></c:set>
+					</c:otherwise>
 				</c:choose>
+				
+				<div class="${classVar}">
+				<c:if test="${product.remainingStock <= 0}">
+					<span class="banner">Sold Out</span>
+				</c:if>		
 
 				<!-- Link to the Detail page using the product id (e.g. products/detail?id=1) -->
-				<a class="product-image"
-					href="<c:url value="/products/detail?id=${product.id}"/>"> <img
+				<a class="product-image" href="<c:url value="detail?id=${product.id}"/>"> <img
 					src="<c:url value="/images/product-images/${product.imageName}"/>" />
 				</a>
 				<div class="details">
@@ -43,6 +50,11 @@
 							<span class="${i <= product.averageRating ? 'filled' : '' }">&#9734;</span>
 						</c:forEach>
 					</div>
+					
+					<c:if test="${product.remainingStock > 0 && product.remainingStock <= 5 }">
+						<span class="product-alert">Only ${product.remainingStock}
+								left!</span>
+					</c:if>
 
 					<p class="price">
 						<fmt:formatNumber value="${product.price }" type="CURRENCY" />
