@@ -1,16 +1,26 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <c:set var="pageTitle" value="All Actors List"/>
-
+<!DOCTYPE html>
 <%@include file="common/header.jspf"%>
-<!-- Form goes here -->
+
+<form method="GET" action="actorListSearch">
+
+    <label for="last_name">Actor's Lastname: </label>
+	<input type="text" name="last_name"/>
+	
+    <input type="submit">
+</form>
 <table class="table">
 <tr>
-<th>Name</th>
+<th>w</th>
 </tr>
 <c:forEach items="${actors}" var="actor">
 <tr>
-    <!-- What do we print here for each actor? -->
+<td>
+ 
+ <c:out value= "${actor.firstName} ${' ' }${actor.lastName}" />
+
 </tr>
 </c:forEach>
 </table>
