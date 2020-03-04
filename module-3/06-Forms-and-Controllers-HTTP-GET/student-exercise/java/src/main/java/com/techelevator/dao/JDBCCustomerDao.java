@@ -27,9 +27,17 @@ public class JDBCCustomerDao implements CustomerDao {
 	@Override
 	public List<Customer> searchAndSortCustomers(String search, String sort) {
 		List<Customer> customers = new ArrayList<Customer>();
-		
-		String customerSearchSql = "SELECT first_name, last_name, email, active FROM customer WHERE first_name ILIKE ? OR last_name ILIKE ? order by ?";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(customerSearchSql, search, search, sort);
+		String searchString = "%" + search + "%";
+		String append = "";
+		if(sort.equals("last_name")) {
+				append = "ORDER BY last_name;";
+		} else if (sort.equals("email")){
+			append = "ORDER BY email;";
+		} else {
+			append ="ORDER BY active DESC;";
+		}
+		String customerSearchSql = "SELECT first_name, last_name, email, active FROM customer WHERE first_name ILIKE ? OR last_name ILIKE ?" + append;
+        SqlRowSet results = jdbcTemplate.queryForRowSet(customerSearchSql, searchString, searchString);
 		while (results.next()) {
 			customers.add(mapRowToCustomer(results));
 		}
