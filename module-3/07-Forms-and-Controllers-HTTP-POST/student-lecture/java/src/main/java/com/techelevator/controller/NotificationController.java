@@ -23,7 +23,7 @@ public class NotificationController {
 	 * than just passing it as the default attribute	*/
 	@RequestMapping(path = "/notificationSignupInput", method = RequestMethod.GET)
 	public String showNotificationSignupForm() {
-
+		
 		return "notificationSignupInput";
 	}
 

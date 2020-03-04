@@ -2,24 +2,44 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Hello Spring MVC</title>
-	</head>
-	<body style="background:lightgrey">
-		<h1>Welcome to the official site for "Squirrel Parties for Dummies" by Craig Castelaz <c:out value="${param.name}" />!</h1>
+<head>
+<title>Welcome to Squirrel World</title>
+</head>
+<body style="background: lightgrey">
+	<h1>
+		Welcome
+		<c:out value="${param.name}" />
+		to the official site for "Squirrel Parties for Dummies" by Craig Castelaz!
+	</h1>
 
-			<div id="main_content">
-				<h1>Do you want to be more Awesome?</h1>
-				<p>Of course you do!  Everyone wants more <strong>awesomeness</strong> in their life!  Well, guess what you lucky stiff?  Your desire for more awesomeness is about to be <strong>fulfilled</strong>!  Just do the following:</p>
-				<ol>
-				<li>Grab your mouse (or other pointing device of choice)</li>
-				<li>Assure yourself that you deserve to <strong>be more awesome</strong></li>
-				<li><strong>Click the green button</strong></li>
-				<li>Provide your name and email address and we'll let you know when it's time to <strong>unveil the awesomeness</strong></li>
-				</ol>
-			
-			<a href=" _____ FILL THIS IN WITH LINK ________"><img alt="Button NAME " src="img/button.png"></a>
-		</div>
-		
-	</body>
+	<img src="img/forDummies.png"
+		alt="Squirrel Parties for Dummes Book Art">
+
+
+	<div id="main_content">
+		<h2>Enjoyed the book?</h2>
+		<h2>Hated the book? I don't care I still got your money.</h2>
+		<p>Leave your love/hate comments in a review</p>
+
+		<form method="GET" action="review">
+		<input type="submit" value="Submit a Review"/>
+		</form>
+	</div>
+	<div>
+		<c:forEach var="review" items="${reviews}">
+			<c:out value="${review.title}" />
+			<br>
+			<c:out value="${review.username}" />
+			<br>
+			<c:out value="${review.rating}" />
+			<br>
+			<c:out value="${review.dateSubmitted}" />
+			<br>
+			<c:out value="${review.text}" />
+			<br>
+			<br>
+			<br>
+		</c:forEach>
+	</div>
+</body>
 </html>
