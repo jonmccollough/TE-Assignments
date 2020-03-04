@@ -33,6 +33,5 @@ public class ActorSearchController {
 		 List<Actor> matchingActors = actorDao.getMatchingActors(last_name);
 		 modelHolder.put("actors", matchingActors);
 		 return "actorList";
-		
 	}
 }
