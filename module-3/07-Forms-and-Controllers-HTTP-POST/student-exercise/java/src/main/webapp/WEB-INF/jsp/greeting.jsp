@@ -18,7 +18,7 @@
 				<li>Provide your name and email address and we'll let you know when it's time to <strong>unveil the awesomeness</strong></li>
 				</ol>
 			
-			<a href="notificationSignupInput"><img alt="I Want Awesome Button" src="img/button.png"></a>
+			<a href=" _____ FILL THIS IN WITH LINK ________"><img alt="Button NAME " src="img/button.png"></a>
 		</div>
 		
 	</body>
