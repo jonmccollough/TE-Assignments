@@ -1,16 +1,14 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<html>
-<head>
-<meta charset="UTF-8">
 <title>Submit a Review</title>
-</head>
+
 <body>
-	<div id="reviews">
+	<div>
 		<h1>Please leave your review</h1>
-		<form action="showReview" method="POST">
+		<form action="review" method="POST">
 			<div class="formGroup">
 				<label for="username">Username: </label>
-				<input type="text" name="username" id="username" />
+				<input type="text" name="username"/>
 			</div>
 			<div class="formGroup">
 				<label for="rating">Rating: </label>	
@@ -37,4 +35,3 @@
 			</form>
 		</div>
 </body>
-</html>

@@ -19,12 +19,12 @@ public class HelloController {
 	@Autowired
 	private ReviewDao reviewDao;
 	
-	@RequestMapping(path="/greeting")
-	public String displayGreeting(ModelMap modelHolder) {
-		List<Review> getAllReviews = reviewDao.getAllReviews();
-		modelHolder.put("reviews", getAllReviews);
-	
-		return "greeting";
+	@RequestMapping(path="/greeting", method=RequestMethod.GET) 
+	public String homePage(ModelMap modelHolder) {
+	    
+	    List<Review> allReviews = reviewDao.getAllReviews();
+	    modelHolder.put("reviews", allReviews);
+	    return "greeting";
 	}
 	
 	@RequestMapping(path="/review", method = RequestMethod.GET)
@@ -40,3 +40,5 @@ public class HelloController {
 	}
 	
 }
+
+

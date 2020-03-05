@@ -7,13 +7,11 @@
 </head>
 <body style="background: lightgrey">
 	<h1>
-		Welcome
-		<c:out value="${param.name}" />
-		to the official site for "Squirrel Parties for Dummies" by Craig Castelaz!
+		Welcome	to the official site for "Squirrel Parties for Dummies" by Craig Castelaz!
 	</h1>
 
 	<img src="img/forDummies.png"
-		alt="Squirrel Parties for Dummes Book Art">
+		alt="Squirrel Parties for Dummes Book Art"/>
 
 
 	<div id="main_content">
