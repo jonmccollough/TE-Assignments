@@ -1,4 +1,4 @@
-﻿# Favorite Things Survey
+# Favorite Things Survey
 
 In this exercise, your application should ask the user a series of questions and store each answer in the HTTP session. You should use `ModelMap` and the `@SessionAttribute` annotation in the controller.
 
@@ -39,4 +39,4 @@ The user sees the last page at **FavoriteThings/Summary**.
 
 * Remember to use the [Post-Redirect-Get (PRG) pattern][post-redirect-get pattern] to navigate from one page to another.
 
-[post-redirect-get pattern]: https://en.wikipedia.org/wiki/Post/Redirect/Get
+# [post-redirect-get pattern]: https://en.wikipedia.org/wiki/Post/Redirect/Get

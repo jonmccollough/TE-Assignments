@@ -29,7 +29,21 @@
 			<br>
 			<c:out value="${review.username}" />
 			<br>
-			<c:out value="${review.rating}" />
+			<c:if test = "${review.rating == 1}">
+         	<img src="img/star.png">
+    		</c:if>
+			<c:if test = "${review.rating == 2}">
+         	<img src="img/star.png"><img src="img/star.png">
+    		</c:if>
+    		<c:if test = "${review.rating == 3}">
+         	<img src="img/star.png"><img src="img/star.png"><img src="img/star.png">
+    		</c:if>
+    		<c:if test = "${review.rating == 4}">
+         	<img src="img/star.png"><img src="img/star.png"><img src="img/star.png"><img src="img/star.png">
+    		</c:if>
+    		<c:if test = "${review.rating == 5}">
+         	<img src="img/star.png"><img src="img/star.png"><img src="img/star.png"><img src="img/star.png"><img src="img/star.png">
+    		</c:if>
 			<br>
 			<c:out value="${review.dateSubmitted}" />
 			<br>
