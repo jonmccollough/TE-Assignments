@@ -44,9 +44,11 @@ public class UserController {
 			RedirectAttributes flash ) {
 		if(result.hasErrors()) {
 			flash.addFlashAttribute("registration", registerFormValues);
+			flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "registration", result);
+			return "register";
 		}
 		flash.addFlashAttribute("message", "You have successfully registered!");
-		flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "registration", result);
+		
 		return "redirect:/registrationConfirmation";
 	}
 	
@@ -78,9 +80,11 @@ public class UserController {
 			RedirectAttributes flash ) {
 		if(result.hasErrors()) {
 			flash.addFlashAttribute("login", loginFormValues);
+			flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "login", result);
+			return "login";
 		}
 		flash.addFlashAttribute("message", "You have successfully logged in!");
-		flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "login", result);
+		
 		return "redirect:/loginConfirmation";
 	}
 	
