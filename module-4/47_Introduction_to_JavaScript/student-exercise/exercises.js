@@ -201,9 +201,10 @@ firstName, lastName, and age. Populate the properties with your values.
 	}
 */
 function createObject (firstName, lastName, age){
-	var person;
-	person.firstName = 'Jon', 
-	person.lastName = 'Smith', 
-	person.age = 50;
+	let person = {
+	firstName : "John", 
+	lastName : "Smith", 
+	age : 50
+} 
+return person;
 }
-var createObject = new createObject("Jon", "Smith", "50");
