@@ -94,29 +94,25 @@ const makeNumber = (first='', second='') => {
  * @param {...number} num a series of numbers to add together
  * @returns {number} the sum of all the parameters (or arguments)
  */
-function addAll(num) {
-  Array.from((num),x => x+x);
-  return x[x.length-1];
-}
-//   ;
-//   for(let i = 0; i < num.length; i++){
-//   let sum =+ num[i] 
-//   } return sum;
-// }
- 
 
-
+function addAll() {
+  return Array.from(arguments).reduce(
+    (sum, number) => {
+      return sum + number;
+      }, 0);
+      }
 
 /*
  * Write and document a function called makeHappy that takes
  * an array and prepends 'Happy ' to the beginning of all the
  * words and returns them as a new array. Use the `map` function.
  */
-
-
-
-
-
+function makeHappy(angry) {
+  return angry.map((thing) => {
+return 'Happy ' + thing;
+  }
+  );
+}
 
 /*
  * Write and document a function called getFullAddressesOfProperties
@@ -135,10 +131,12 @@ function addAll(num) {
  *
  * Use `map` and an anonymous function.
  */
-
-
-
-
+function getFullAddressesOfProperties(place){
+  return place.map((things) => {
+    return `${things.streetNumber} ${things.streetName} ${things.streetType}` +
+     ` ${things.city} ${things.state} ${things.zip}`;
+  });
+}
 
 /*
  * Create and document a function called findLargest.
@@ -146,9 +144,15 @@ function addAll(num) {
  * Using `forEach`, find the largest element in an array.
  * It should work for strings and numbers.
  */
-
-
-
+function findLargest(large) {
+  let bigGuy = '';
+  large.forEach((thing) => {
+    if (thing > bigGuy){
+      bigGuy = thing;
+      } 
+  });
+   return bigGuy;
+}
 
 /*
  * CHALLENGE
@@ -167,3 +171,11 @@ function addAll(num) {
  *
  * Read the tests to verify you have the correct behavior.
  */
+
+ function getSumOfSubArrayValues(){
+  return Array.from(arguments).reduce(
+    (sum, number) => {
+      return sum + number;
+      }, 0);
+    }
+ 
