@@ -3,7 +3,7 @@ let reviews = [];
 function loadReviews() {
   console.log("Load Reviews...");
 
-  fetch('https://api.thecatapi.com/v1/images/search?size=full') 
+  fetch('data.json') 
     .then((response) => {
       return response.json();
     })
