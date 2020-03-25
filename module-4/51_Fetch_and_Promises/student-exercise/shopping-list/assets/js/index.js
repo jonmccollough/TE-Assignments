@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {  
     const loadListBtn = document.querySelector('.loadingButton');
-    loadListBtn.addEventListener('click', (foo) => {
+    loadListBtn.addEventListener('click', () => {
         const loadInput = 'assets/data/shopping-list.json';
         fetch(loadInput)
         .then((response) => {
