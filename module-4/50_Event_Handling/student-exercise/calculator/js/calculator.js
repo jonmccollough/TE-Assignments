@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   decimal.addEventListener('click', clickNumber );
 
-
   // get a reference to the all clear button
   // add a click event listener to call the function clear  
   let allClear = document.querySelector('.all-clear');
@@ -107,12 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   ops.forEach( (element) => {
     element.addEventListener('click', clickOperator );
-    });
+  });
     
   // add click event listener for the equal sign
   // should call the function performOperation
   let equals = document.querySelector('.equal-sign');
 
   equals.addEventListener('click', performOperation);
-
 })
