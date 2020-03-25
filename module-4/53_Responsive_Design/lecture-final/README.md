@@ -7,8 +7,8 @@ Use the student-tutorial along with the Tech Elevator book to become familiar wi
 
 
 **Viewport**
-When designed a responsive site, we often begin by setting the viewport meta tag. Without this, sites that were only designed for desktop screen sizes will appear visible in a mobile view, though fully zoomed out. This was an intentional design decision by mobile browser makers, as it enables the user to understand what they can zoom in on. It, however, it not ideal. A responsively designed web site is my more ideal. Again, to do this, start by setting the viewport meta tag.
-`<meta name="viewport" content="width=100, initial-scale=1.0">`
+When designing a responsive site, we often begin by setting the viewport meta tag. Without this, sites that were only designed for desktop screen sizes will appear visible in a mobile view, though fully zoomed out. This was an intentional design decision by mobile browser makers, as it enables the user to understand what they can zoom in on. It, however, is not ideal. A responsively designed web site is more ideal. To do this, start by setting the viewport meta tag.
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 
 To see an example of the zoom out in action, view the following pages on mobile and notice that the latter page looks much better. All that is different between the two is the viewport meta tag.
 https://www.w3schools.com/css/example_withoutviewport.htm 
