@@ -8,7 +8,7 @@
           </div>
           <div class="form-group">
             <label for="shippingAddress">Address</label>
-            <input type="text" class="form-control" id="shippingAddress" placeholder="1234 Main St" v-model="shipping.address"/>
+            <input type="text" class="form-control" id="shippingAddress" placeholder="1234 Main St" v-model.trim="shipping.address"/>
           </div>
           <div class="form-group">
             <label for="shippingAddress2">Address 2</label>
@@ -17,13 +17,13 @@
               class="form-control"
               id="shippingAddress2"
               placeholder="Apartment, studio, or floor"
-              v-model="shipping.address2"
+              v-model.trim="shipping.address2"
             />
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="shippingCity">City</label>
-              <input type="text" class="form-control" id="shippingCity" v-model="shipping.city"/>
+              <input type="text" class="form-control" id="shippingCity" v-model.trim="shipping.city"/>
             </div>
             <div class="form-group col-md-4">
               <label for="shippingState">State</label>
@@ -36,7 +36,7 @@
             </div>
             <div class="form-group col-md-2">
               <label for="shippingZip">Zip</label>
-              <input type="text" class="form-control" id="shippingZip" v-model="shipping.zip"/>
+              <input type="text" class="form-control" id="shippingZip" v-model.trim="shipping.zip"/>
             </div>
           </div>
           <div class="form-row">
@@ -90,7 +90,7 @@
                 class="form-control"
                 id="billingAddress"
                 placeholder="1234 Main St"
-                v-model="billing.address"
+                v-model.trim="billing.address"
               />
             </div>
             <div class="form-group">
@@ -100,13 +100,13 @@
                 class="form-control"
                 id="billingAddress2"
                 placeholder="Apartment, studio, or floor"
-                v-model="billing.address2"
+                v-model.trim="billing.address2"
               />
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="billingCity">City</label>
-                <input type="text" class="form-control" id="billingCity" v-model="billing.city"/>
+                <input type="text" class="form-control" id="billingCity" v-model.trim="billing.city"/>
               </div>
               <div class="form-group col-md-4">
                 <label for="billingState">State</label>
@@ -119,7 +119,7 @@
               </div>
               <div class="form-group col-md-2">
                 <label for="billingZip">Zip</label>
-                <input type="text" class="form-control" id="billingZip" v-model="billing.zip"/>
+                <input type="text" class="form-control" id="billingZip" v-model.trim="billing.zip"/>
               </div>
             </div>
           </div>
