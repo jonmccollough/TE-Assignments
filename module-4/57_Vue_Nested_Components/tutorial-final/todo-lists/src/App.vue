@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <todo-search v-on:filter-tasks="handleSearch"></todo-search>
-    <todo-list title="My Work Todo's" v-bind:todos="work" v-bind:search="search" ></todo-list>
-    <todo-list title="My Personal Todo's" v-bind:todos="personal" v-bind:search="search" ></todo-list>
-    <todo-list title="My Household Todo's" v-bind:todos="household" v-bind:search="search" ></todo-list>
+    <todo-list title="My Work Todo's" v-bind:data="work" v-bind:search="search" ></todo-list>
+    <todo-list title="My Personal Todo's" v-bind:data="personal" v-bind:search="search" ></todo-list>
+    <todo-list title="My Household Todo's" v-bind:data="household" v-bind:search="search" ></todo-list>
   </div>
 </template>
 

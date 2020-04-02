@@ -1,8 +1,8 @@
 <template>
     <div class="shopping-list">
-        <h2>{{title}}</h2>
+        <h2>{{this.title}}</h2>
         <ul>
-            <li v-for="item in data" 
+            <li v-for="item in filteredData" 
                 v-bind:key="item.id" 
                 v-bind:class="{ completed: item.completed }" 
                 v-on:click="changeStatus(item.id,$event)">
@@ -18,12 +18,9 @@
 export default {
     name: 'shopping-list',
     props: {
-
-    },
-    data() {
-        return {
-            
-        }
+        title: String,
+        search: String,
+        data: Array
     },
     methods: {
         changeStatus(id,event) {
@@ -38,7 +35,10 @@ export default {
         }
     },
     computed: {
-
+        filteredData() {
+            const filter = new RegExp(this.search,'i');
+            return this.data.filter(item => item.name.match(filter));
+        }
     }
 }
 </script>
